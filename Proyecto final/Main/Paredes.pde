@@ -1,21 +1,16 @@
 class Pared {
- float x,y,rx,ry,ang = 0;
+ float x,y,rx,ry = 0;
   
-  Pared(float posx, float posy, float angulo){
+  Pared(float posx, float posy, float lonx, float lony){
     
     x = posx;
     y = posy;
-    rx = 20;
-    ry = 100;
-    ang = angulo;
+    rx = lonx;
+    ry = lony;
     
   }
   
   void display(){
-    pushMatrix();
-    translate(x,y);
-    rotate(ang);
-    rect(0,0,rx,ry);
-    popMatrix();
+    rect(x,y,rx,ry);
   }
 }
