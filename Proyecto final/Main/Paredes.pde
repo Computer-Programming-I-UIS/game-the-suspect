@@ -11,6 +11,7 @@ class Pared {
   }
   
   void display(){
+    fill(128,64,0);
     rect(x,y,rx,ry);
   }
 }
