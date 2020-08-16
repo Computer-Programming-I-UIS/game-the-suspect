@@ -9,7 +9,7 @@ void keyPressed(){
 }
 
 void keyReleased(){
- if(key == 'a' || key == 'A' || keyCode == LEFT) {a = false;}
+ if(key == 'a' || key == 'A' || keyCode == LEFT) {a = false; }
  if(key == 'd' || key == 'D' || keyCode == RIGHT){d = false;}
  if(key == 'w' || key == 'W' || keyCode == UP)   {w = false;}
  if(key == 's' || key == 'S' || keyCode == DOWN) {s = false;}
