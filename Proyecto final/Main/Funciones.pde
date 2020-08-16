@@ -84,3 +84,16 @@ void transicion(){
  rect(0,0,width,tray);
  rect(0,height - tray, width,tray);
 }
+
+void piso(){
+  
+  for(int i = 0; i < pisoY.length; i++){
+    if(i%2 == 0){
+     fill( 230,181,126,180);
+    }
+    if(i%2 == 1){
+     fill(161,130,98,180); 
+    }
+    rect(40,pisoY[i],1140,20); 
+  }
+}

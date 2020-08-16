@@ -4,10 +4,14 @@ int nx,ny = 0;
 Personaje p;
 Pared[] pa = new Pared[10];
 Puzzle pu;
+int[] pisoY = new int[30];
 
 void setup(){
   size(1280,720);
   
+  for(int i = 0; i < pisoY.length; i++){
+    pisoY[i] = (i*20) + 40; 
+  }
   travx = 8;
   travy = map(travx,0,width,0,height);
   
@@ -19,7 +23,8 @@ void setup(){
 }
 
 void draw(){
-  background(0);
+  background(40);
+  piso();
   p.update();
   colision();
   p.display();
