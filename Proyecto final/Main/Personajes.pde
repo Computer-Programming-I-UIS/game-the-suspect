@@ -5,7 +5,9 @@ class Personaje{
  int animacion = 0;
  PImage [] personaje = new PImage[imagenes];
  PImage [] personaje2 = new PImage[imagenes];
+ PImage [] titulo = new PImage[imagenes];
  int count=1;
+ int start=0;
   
   Personaje(){
     x = width/2;
@@ -25,10 +27,15 @@ class Personaje{
       personaje2[i] = loadImage("detectivepiskel"+ i + ".png");
     }
     
+     for(int i=0; i < titulo.length; i++){
+      titulo[i] = loadImage("titulo"+ i + ".png");
+    }
+    
   }
   
   void display(){
     
+    if (start==1){
     if(a || s || w ||d){
       
       if(count==0){
@@ -53,7 +60,23 @@ class Personaje{
      }
     }
   }    
-     
+  
+  if(keyPressed){
+      if(keyCode == CONTROL){
+        start=1;}}
+    
+    
+    if(start==0){
+      background(0);
+      image(titulo[animacion],320,200);
+      if(frameCount%15 == 0){
+      animacion = (animacion+1)%titulo.length;}
+      
+      textSize(30);
+      fill(250);
+      text("press control to start",455,350);
+      }
+  }   
        
        
   void update(){
