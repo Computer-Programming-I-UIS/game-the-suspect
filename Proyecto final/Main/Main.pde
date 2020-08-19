@@ -24,15 +24,16 @@ void setup(){
 
 void draw(){
   background(40);
-  piso();
+  /*piso();
   p.update();
   colision();
   p.display();
   niveles();
   for(int i = 0; i < pa.length; i++){
     pa[i].display();
-  }
+  }*/
   //transicion();
   
   //pu.puzzle1();
+  pu.p1(200,200);
 }

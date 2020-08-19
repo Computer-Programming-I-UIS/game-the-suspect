@@ -1,11 +1,23 @@
 class Puzzle{
   float lp1,diamp1,xp1,yp1 = 0;
+  float cuadp1 = 0;
+  int i = 0;
+  PVector[] fichas = new PVector[9];  
+  
  Puzzle(){
    lp1 = 30;
    diamp1 = 100;
    xp1 = 500;
    yp1 = 250;
+   cuadp1 = 100;
+   i = 0;
    
+    for(int yf = 0; yf < 3; yf++){
+      for(int xf = 0; xf < 3; xf++){
+        fichas[i] = new PVector(210+(cuadp1*xf),210 +(cuadp1*yf));
+        i++;
+      } 
+   }
  }
  
  void puzzle1(){
@@ -36,5 +48,19 @@ class Puzzle{
   rect(x,y,lonx,lony);
   fill(0);
   rect(x+20,y+20,lonx-40,lony-40);
+ }
+ 
+ void p1(float posx,float posy){
+   
+   fill(0);
+   rect(posx,posy,(cuadp1*3)+20,(cuadp1*3)+20);
+   fill(255);
+   rect(posx+10,posy+10,cuadp1*3,cuadp1*3);
+   
+   for(int i = 0; i < fichas.length;i++){
+     fill(255,0,0);
+     strokeWeight(1);
+     rect(fichas[i].x,fichas[i].y,cuadp1,cuadp1);
+   }
  }
 }
