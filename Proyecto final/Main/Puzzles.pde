@@ -1,8 +1,8 @@
 class Puzzle{
   float lp1,diamp1,xp1,yp1 = 0;
-  float cuadp1 = 0;
+  float cuadp1, xlim = 0;
   int i = 0;
-  PVector[] fichas = new PVector[9];  
+  PVector[] fichas = new PVector[8];  
   
  Puzzle(){
    lp1 = 30;
@@ -13,8 +13,16 @@ class Puzzle{
    i = 0;
    
     for(int yf = 0; yf < 3; yf++){
-      for(int xf = 0; xf < 3; xf++){
+      if (yf == 2){
+       xlim = 2; 
+      }
+      else {
+       xlim = 3; 
+      }
+      for(int xf = 0; xf < xlim; xf++){
+        if(!(i == 9)){
         fichas[i] = new PVector(210+(cuadp1*xf),210 +(cuadp1*yf));
+        }
         i++;
       } 
    }
