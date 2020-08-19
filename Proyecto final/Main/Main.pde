@@ -7,7 +7,7 @@ Puzzle pu;
 int[] pisoY = new int[30];
 
 void setup(){
-  size(1280,720);
+  size(1240,720);
   
   for(int i = 0; i < pisoY.length; i++){
     pisoY[i] = (i*20) + 40; 

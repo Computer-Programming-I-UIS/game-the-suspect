@@ -10,12 +10,13 @@ class Personaje{
  int start=0;
   
   Personaje(){
-    x = width/2;
-    y = height/2;
-    vx = 5;
-    vy = 5;
     rx = 95;
     ry = 100;
+    x = (width/2)-(rx/2);
+    y = (height/2)-(ry/2);
+    vx = 5;
+    vy = 5;
+    
     dx = 1;
     dy = 1;
     
@@ -75,6 +76,8 @@ class Personaje{
       textSize(30);
       fill(250);
       text("press control to start",455,350);
+      x = (width/2)-(rx/2);
+      y = (height/2)-(ry/2);
       }
   }   
        
