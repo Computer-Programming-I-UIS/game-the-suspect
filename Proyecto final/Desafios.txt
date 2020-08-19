@@ -1,1 +1,6 @@
 Desafios
+-Armar un rompecabezas una pintura
+-Suma de simbolos raros
+-Camino con trampas
+-
+-Adivinanza para buscar una llave maestra
