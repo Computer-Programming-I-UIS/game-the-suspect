@@ -8,10 +8,10 @@ class Puzzle{
   
  Puzzle(float posxx, float posyy){
    lp1 = 30;
-   diamp1 = 100;
+   diamp1 = 80;
    xp1 = 500;
    yp1 = 250;
-   cuadp1 = 100;
+   cuadp1 = 80;
    i = 0;
    vlim = 0.8;
    posx = posxx;
@@ -19,7 +19,7 @@ class Puzzle{
    
    for(int i = 0; i < ned.length; i++){
     ned[i] = loadImage("ned" + i + ".png"); 
-    ned[i].resize(98,98);
+    ned[i].resize(int(cuadp1-2),int(cuadp1-2));
    }
    //ned[2].resize(102,100);
    

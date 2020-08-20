@@ -83,6 +83,14 @@ void nivel00(){
     pa[i] = new Pared(1180,385,20,265); // derecha down
     break;
     
+    case 7:
+    pa[i] = new Pared(550,450,140,10);
+    break;
+    
+    case 8:
+    pa[i] = new Pared(550,450,10,100);
+    break;
+    
     default:
     pa[i] = new Pared(0,0,0,0);
     

@@ -15,7 +15,7 @@ void setup(){
   travx = 8;
   travy = map(travx,0,width,0,height);
   
-  pu = new Puzzle(450,150);
+  pu = new Puzzle(480,150);
   p = new Personaje();
   for(int i = 0; i < pa.length; i++){
     pa[i] = new Pared(40*i,20,20,100);
