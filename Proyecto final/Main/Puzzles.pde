@@ -1,12 +1,12 @@
 class Puzzle{
   float lp1,diamp1,xp1,yp1 = 0;
-  float cuadp1, xlim, vlim = 0;
+  float cuadp1, xlim, vlim, posx, posy = 0;
   int i, c = 0;
   PVector[] fichas = new PVector[8];  
   PVector spdx = new PVector(5,0);
   PImage[] ned = new PImage[8]; 
   
- Puzzle(){
+ Puzzle(float posxx, float posyy){
    lp1 = 30;
    diamp1 = 100;
    xp1 = 500;
@@ -14,6 +14,8 @@ class Puzzle{
    cuadp1 = 100;
    i = 0;
    vlim = 0.8;
+   posx = posxx;
+   posy = posyy;
    
    for(int i = 0; i < ned.length; i++){
     ned[i] = loadImage("ned" + i + ".png"); 
@@ -30,7 +32,7 @@ class Puzzle{
       }
       for(int xf = 0; xf < xlim; xf++){
         if(!(i == 9)){
-        fichas[i] = new PVector(210+(cuadp1*xf),210 +(cuadp1*yf));
+        fichas[i] = new PVector(posx+10+(cuadp1*xf),posy+10+(cuadp1*yf));
         }
         i++;
       } 
@@ -67,7 +69,8 @@ class Puzzle{
   rect(x+20,y+20,lonx-40,lony-40);
  }
  
- void p1(float posx,float posy){
+ 
+ void p1(){
    
    fill(0);
    rect(posx,posy,(cuadp1*3)+20,(cuadp1*3)+20);

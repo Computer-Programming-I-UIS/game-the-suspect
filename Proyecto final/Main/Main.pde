@@ -15,7 +15,7 @@ void setup(){
   travx = 8;
   travy = map(travx,0,width,0,height);
   
-  pu = new Puzzle();
+  pu = new Puzzle(450,150);
   p = new Personaje();
   for(int i = 0; i < pa.length; i++){
     pa[i] = new Pared(40*i,20,20,100);
@@ -24,16 +24,17 @@ void setup(){
 
 void draw(){
   background(40);
-  /*piso();
+  piso();
   p.update();
   colision();
-  p.display();
+  
   niveles();
   for(int i = 0; i < pa.length; i++){
     pa[i].display();
-  }*/
+  }
   //transicion();
   
   //pu.puzzle1();
-  pu.p1(200,200);
+  p.display();
+  
 }
