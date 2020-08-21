@@ -78,13 +78,7 @@ class Puzzle{
    rect(posx+10,posy+10,cuadp1*3,cuadp1*3);
    
    p1move(posx+10, posy+10);
-   //col();
    
-   /*for(int i = 0; i < fichas.length;i++){
-     fill(255,0,0);
-     strokeWeight(1);
-     rect(fichas[i].x,fichas[i].y,cuadp1,cuadp1);
-   }*/
    image(ned[0],fichas[0].x,fichas[0].y);
    image(ned[1],fichas[1].x,fichas[1].y);
    image(ned[2],fichas[3].x-2,fichas[3].y);
@@ -93,8 +87,6 @@ class Puzzle{
    image(ned[5],fichas[6].x,fichas[6].y);
    image(ned[6],fichas[7].x,fichas[7].y);
    image(ned[7],fichas[5].x,fichas[5].y);
-   
-   
  }
  
  
@@ -104,7 +96,7 @@ class Puzzle{
      if(mousePressed && mouseX <= fichas[i].x + cuadp1 && mouseX >= fichas[i].x && mouseY <= fichas[i].y + cuadp1 && mouseY >= fichas[i].y){
        c = i;
      }
-     
+     if(playing1){
      if(a){
         spdx.set(fichas[c].x-cuadp1,fichas[c].y);
        spdx.sub(fichas[c]);
@@ -132,6 +124,7 @@ class Puzzle{
        spdx.limit(vlim);
        fichas[c].add(spdx);
       }
+     }
       
       col(posx, posy);
    }

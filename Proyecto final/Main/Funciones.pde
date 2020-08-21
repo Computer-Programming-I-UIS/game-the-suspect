@@ -5,6 +5,7 @@ void keyPressed(){
  if(key == 'd' || key == 'D' || keyCode == RIGHT){d = true;}
  if(key == 'w' || key == 'W' || keyCode == UP)   {w = true;}
  if(key == 's' || key == 'S' || keyCode == DOWN) {s = true;}
+ if(key == 'f' || key == 'F') {f = true;}
   
 }
 
@@ -13,6 +14,7 @@ void keyReleased(){
  if(key == 'd' || key == 'D' || keyCode == RIGHT){d = false;}
  if(key == 'w' || key == 'W' || keyCode == UP)   {w = false;}
  if(key == 's' || key == 'S' || keyCode == DOWN) {s = false;}
+ if(key == 'f' || key == 'F') {f = false;}
   
 }
 
@@ -95,5 +97,31 @@ void piso(){
      fill(161,130,98,180); 
     }
     rect(40,pisoY[i],1140,20); 
+  }
+}
+
+void inip1(){
+ 
+  if(p.x > 550 && p.x < 690 && p.y > 450){
+    
+    if(playing1){
+     text("F para dejar de jugar",520,600);
+     if(f== true && antf == false){
+      playing1 = false;  
+     }
+     p.vx = 0;
+     p.vy = 0;
+     //pu.p1();
+   }
+   else{
+     text("F para jugar",520,600);
+     if(f== true && antf == false){
+       playing1 = true;
+       pu1 = true;
+     }
+     p.vx = 5;
+     p.vy = 5;
+   }
+   antf = f;
   }
 }

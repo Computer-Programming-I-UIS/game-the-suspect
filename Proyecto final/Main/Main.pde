@@ -1,4 +1,4 @@
-boolean a,w,s,d,tra = false;
+boolean a,w,s,d,f,tra,playing1,pu1,antf = false;
 float trax,tray,travx,travy = 0;
 int nx,ny = 0;
 Personaje p;
@@ -32,9 +32,6 @@ void draw(){
   for(int i = 0; i < pa.length; i++){
     pa[i].display();
   }
-  //transicion();
-  
-  //pu.puzzle1();
   p.display();
   
 }
