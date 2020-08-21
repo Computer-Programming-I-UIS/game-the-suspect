@@ -105,7 +105,9 @@ void inip1(){
   if(p.x > 550 && p.x < 690 && p.y > 450){
     
     if(playing1){
-     text("F para dejar de jugar",520,600);
+     textSize(15);
+     fill(200,0,0);
+     text("F para dejar de jugar",520,595);
      if(f== true && antf == false){
       playing1 = false;  
      }
@@ -114,7 +116,9 @@ void inip1(){
      //pu.p1();
    }
    else{
-     text("F para jugar",520,600);
+     textSize(15);
+     fill(200,0,0);
+     text("F para jugar",520,595);
      if(f== true && antf == false){
        playing1 = true;
        pu1 = true;

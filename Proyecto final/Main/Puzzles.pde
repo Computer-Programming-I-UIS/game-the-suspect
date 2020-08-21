@@ -87,6 +87,11 @@ class Puzzle{
    image(ned[5],fichas[6].x,fichas[6].y);
    image(ned[6],fichas[7].x,fichas[7].y);
    image(ned[7],fichas[5].x,fichas[5].y);
+   
+   for( int i=0; i<8; i++){
+     image(ned[i],fichas[i].x,fichas[i].y);}
+     
+   
  }
  
  
