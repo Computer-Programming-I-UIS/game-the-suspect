@@ -4,7 +4,8 @@ class Puzzle{
   int i, c = 0;
   PVector[] fichas = new PVector[8];  
   PVector spdx = new PVector(5,0);
-  PImage[] ned = new PImage[8]; 
+  PImage[] monalisa = new PImage[8]; 
+  PImage cuadro;
   
  Puzzle(float posxx, float posyy){
    lp1 = 30;
@@ -16,10 +17,12 @@ class Puzzle{
    vlim = 0.8;
    posx = posxx;
    posy = posyy;
+   cuadro=loadImage("monalisa.png"); 
+   cuadro.resize(100,100);
    
-   for(int i = 0; i < ned.length; i++){
-    ned[i] = loadImage("ned" + i + ".png"); 
-    ned[i].resize(int(cuadp1-2),int(cuadp1-2));
+   for(int i = 0; i < monalisa.length; i++){
+    monalisa[i] = loadImage("monalisa" + i + ".png"); 
+    monalisa[i].resize(int(cuadp1-2),int(cuadp1-2));
    }
    //ned[2].resize(102,100);
    
@@ -76,20 +79,22 @@ class Puzzle{
    rect(posx,posy,(cuadp1*3)+20,(cuadp1*3)+20);
    fill(150);
    rect(posx+10,posy+10,cuadp1*3,cuadp1*3);
+   rect(974,70,150,120,100);
+   image(cuadro,1000,80);
    
    p1move(posx+10, posy+10);
    
-   image(ned[0],fichas[0].x,fichas[0].y);
-   image(ned[1],fichas[1].x,fichas[1].y);
-   image(ned[2],fichas[3].x-2,fichas[3].y);
-   image(ned[3],fichas[4].x,fichas[4].y);
-   image(ned[4],fichas[2].x,fichas[2].y);
-   image(ned[5],fichas[6].x,fichas[6].y);
-   image(ned[6],fichas[7].x,fichas[7].y);
-   image(ned[7],fichas[5].x,fichas[5].y);
+  /* image(monalisa[0],fichas[0].x,fichas[0].y);
+   image(monalisa[1],fichas[1].x,fichas[1].y);
+   image(monalisa[2],fichas[3].x-2,fichas[3].y);
+   image(monalisa[3],fichas[4].x,fichas[4].y);
+   image(monalisa[4],fichas[2].x,fichas[2].y);
+   image(monalisa[5],fichas[6].x,fichas[6].y);
+   image(monalisa[6],fichas[7].x,fichas[7].y);
+   image(monalisa[7],fichas[5].x,fichas[5].y);*/
    
    for( int i=0; i<8; i++){
-     image(ned[i],fichas[i].x,fichas[i].y);}
+     image(monalisa[i],fichas[i].x,fichas[i].y);}
      
    
  }
