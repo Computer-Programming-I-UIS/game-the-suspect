@@ -6,6 +6,7 @@ void keyPressed(){
  if(key == 'w' || key == 'W' || keyCode == UP)   {w = true;}
  if(key == 's' || key == 'S' || keyCode == DOWN) {s = true;}
  if(key == 'f' || key == 'F') {f = true;}
+ if(keyCode == ENTER){ enter = true;}
   
 }
 
@@ -15,6 +16,7 @@ void keyReleased(){
  if(key == 'w' || key == 'W' || keyCode == UP)   {w = false;}
  if(key == 's' || key == 'S' || keyCode == DOWN) {s = false;}
  if(key == 'f' || key == 'F') {f = false;}
+ if(keyCode == ENTER){ enter = false;}
   
 }
 
@@ -102,7 +104,7 @@ void piso(){
 
 void inip1(){
  
-  if(p.x > 550 && p.x < 690 && p.y > 450){
+  if(p.x > 550 && p.x < 690 && p.y > 350){
     
     if(playing1){
      textSize(15);
@@ -127,4 +129,52 @@ void inip1(){
    }
    antf = f;
   }
+}
+
+void inicio(){
+ 
+    background(0);
+    image(titulo[anim],320,100);
+    if(frameCount%15 == 0){
+    anim = (anim+1)%titulo.length;}
+      
+    textSize(30);
+    fill(100);
+    if(mousePressed && mouseX <= 660 && mouseX >= 460 && mouseY <= 340 && mouseY >= 300){
+      game = true; 
+     start = false;
+    }
+    rect(460,300,200,40);
+    fill(255);
+    text("START",470,330);
+    
+    fill(100);
+    rect(460,400,200,40);
+    if(mousePressed && mouseX <= 660 && mouseX >= 460 && mouseY <= 440 && mouseY >= 400){
+      start = false;
+      controls = true;
+    }
+    fill(255);
+    text("CONTROLS",470,430);
+    
+    fill(100);
+    rect(460,500,200,40);
+    fill(255);
+    text("CREDITS",470,530); 
+}
+
+void controles(){
+ 
+  background(0);
+  fill(255);
+  rect(570,100,100,100);
+  rect(570,220,100,100);
+  rect(450,220,100,100);
+  rect(690,220,100,100);
+  fill(0);
+  textSize(80);
+  text("W",585,185);
+  text("S",585,305);
+  text("A",465,305);
+  text("D",705,305);
 }

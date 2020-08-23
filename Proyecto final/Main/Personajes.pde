@@ -5,7 +5,6 @@ class Personaje{
  int animacion = 0;
  PImage [] personaje = new PImage[imagenes];
  PImage [] personaje2 = new PImage[imagenes];
- PImage [] titulo = new PImage[imagenes];
  int count=1;
  int start=0;
   
@@ -36,49 +35,29 @@ class Personaje{
   
   void display(){
     
-    if (start==1){
-    if(a || s || w ||d){
-      
-      if(count==0){
-      image(personaje[animacion],x,y);
-      if(frameCount%10 == 0){
-       animacion = (animacion+1)%personaje.length;}
-      }
-       
-      if(count==1){ 
-        image(personaje2[animacion],x,y);
+      if(a || s || w ||d){
+        
+        if(count==0){
+        image(personaje[animacion],x,y);
         if(frameCount%10 == 0){
-         animacion = (animacion+1)%personaje2.length;}
+         animacion = (animacion+1)%personaje.length;}
+        }
+         
+        if(count==1){ 
+          image(personaje2[animacion],x,y);
+          if(frameCount%10 == 0){
+           animacion = (animacion+1)%personaje2.length;}
+        }
       }
-    }
-    else {
-     if(count == 0){
-      image(personaje[animacion],x,y); 
-     }
-     
-     if(count == 1){
-       image(personaje2[animacion],x,y);
-     }
-    }
-  }    
-  
-  if(keyPressed){
-      if(keyCode == CONTROL){
-        start=1;}}
-    
-    
-    if(start==0){
-      background(0);
-      image(titulo[animacion],320,200);
-      if(frameCount%15 == 0){
-      animacion = (animacion+1)%titulo.length;}
-      
-      textSize(30);
-      fill(250);
-      text("press control to start",455,350);
-      x = (width/2)-(rx/2);
-      y = (height/2)-(ry/2);
-      }
+      else {
+       if(count == 0){
+        image(personaje[animacion],x,y); 
+       }
+       
+       if(count == 1){
+         image(personaje2[animacion],x,y);
+       }
+      }    
   }   
        
        
