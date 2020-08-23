@@ -1,8 +1,7 @@
 boolean a,w,s,d,f,q,tra,playing1,pu1,antf,enter,game,controls,credits = false;
 boolean start = true;
 float trax,tray,travx,travy,credy1,credy2 = 0;
-int ny,anim = 0;
-int nx = -1;
+int ny,nx,anim = 0;
 Personaje p;
 Puerta[] puerta = new Puerta[1];
 Pared[] pa = new Pared[10];
@@ -12,6 +11,8 @@ PImage [] titulo = new PImage[3];
 
 void setup(){
   size(1240,720);
+  ny = 0;
+  nx = -1;
   credy1 = 800;
   for(int i = 0; i < pisoY.length; i++){
     pisoY[i] = (i*20) + 40; 

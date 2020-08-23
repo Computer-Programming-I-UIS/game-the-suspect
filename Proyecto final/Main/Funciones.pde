@@ -180,12 +180,15 @@ void controles(){
   rect(570,220,100,100);
   rect(450,220,100,100);
   rect(690,220,100,100);
+  textSize(30);
+  text("Q para ir atras", 20, 40);// si se quiere devolver
   fill(0);
   textSize(80);
   text("W",585,185);
   text("S",585,305);
   text("A",465,305);
   text("D",705,305);
+  
 }
 
 void creditos(){

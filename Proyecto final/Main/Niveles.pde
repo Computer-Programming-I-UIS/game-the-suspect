@@ -52,7 +52,7 @@ void niveles(){
 
 void nivel00(){
  for(int i = 0; i < pa.length; i++){
-   noStroke();
+   strokeWeight(1);
    switch (i){
      
     case 0:
@@ -94,6 +94,7 @@ void nivel00(){
 
 void nivelme10(){
   for(int i = 0; i < pa.length; i++){
+    strokeWeight(1);
    switch (i){
     
      case 0:
@@ -138,6 +139,7 @@ void nivelme10(){
 
 void nivelme11(){
   for(int i = 0; i < pa.length; i++){
+    strokeWeight(1);
    
     switch(i){
      
@@ -158,11 +160,7 @@ void nivelme11(){
       break;
       
       case 4:
-      pa[i] = new Pared(20,640, 500,20); // inferior rigth
-      break;
-      
-      case 5:
-      pa[i] = new Pared(700,640,500,20); // inferior left
+      pa[i] = new Pared(20,640, 1180,20); // inferior
       break;
       
       
@@ -175,6 +173,7 @@ void nivelme11(){
 
 void nivel01(){
  for(int i = 0; i < pa.length; i++){
+   strokeWeight(1);
    switch (i){
      
     case 0:
@@ -190,11 +189,7 @@ void nivel01(){
     break;
     
     case 3:
-    pa[i] = new Pared(20,640, 500,20); // inferior rigth
-    break;
-    
-    case 4:
-    pa[i] = new Pared(700,640,500,20); // inferior left
+    pa[i] = new Pared(20,640,1180,20); // inferior
     break;
     
     case 5:
@@ -216,6 +211,7 @@ void nivel01(){
 void nivel10(){
  
   for(int i = 0; i < pa.length; i++){
+    strokeWeight(1);
     switch(i){
       
      case 0:
@@ -252,6 +248,7 @@ void nivel10(){
 void nivel11(){
   
   for(int i = 0; i < pa.length; i++){
+    strokeWeight(1);
    
     switch(i){
       
@@ -268,7 +265,7 @@ void nivel11(){
      break;
      
      case 3:
-     pa[i] = new Pared(20,640, 500,20); // inferior rigth
+     pa[i] = new Pared(20,640,500 ,20); // inferior rigth
      break;
      
      case 4:
