@@ -7,6 +7,7 @@ void keyPressed(){
  if(key == 's' || key == 'S' || keyCode == DOWN) {s = true;}
  if(key == 'f' || key == 'F') {f = true;}
  if(keyCode == ENTER){ enter = true;}
+ if(key == 'q' || key == 'Q') {q = true;}
   
 }
 
@@ -17,6 +18,7 @@ void keyReleased(){
  if(key == 's' || key == 'S' || keyCode == DOWN) {s = false;}
  if(key == 'f' || key == 'F') {f = false;}
  if(keyCode == ENTER){ enter = false;}
+ if(key == 'q' || key == 'Q') {q = false;}
   
 }
 
@@ -164,7 +166,10 @@ void inicio(){
 }
 
 void controles(){
- 
+ if(q){
+   controls = false;
+   start = true;
+ }
   background(0);
   fill(255);
   rect(570,100,100,100);

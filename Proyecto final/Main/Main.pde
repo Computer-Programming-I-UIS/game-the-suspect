@@ -1,4 +1,4 @@
-boolean a,w,s,d,f,tra,playing1,pu1,antf,enter,game,controls = false;
+boolean a,w,s,d,f,q,tra,playing1,pu1,antf,enter,game,controls = false;
 boolean start = true;
 float trax,tray,travx,travy = 0;
 int ny,anim = 0;
