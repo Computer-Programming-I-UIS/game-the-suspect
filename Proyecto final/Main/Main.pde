@@ -1,6 +1,6 @@
-boolean a,w,s,d,f,q,tra,playing1,pu1,antf,enter,game,controls = false;
+boolean a,w,s,d,f,q,tra,playing1,pu1,antf,enter,game,controls,credits = false;
 boolean start = true;
-float trax,tray,travx,travy = 0;
+float trax,tray,travx,travy,credy1,credy2 = 0;
 int ny,anim = 0;
 int nx = -1;
 Personaje p;
@@ -12,7 +12,7 @@ PImage [] titulo = new PImage[3];
 
 void setup(){
   size(1240,720);
-  
+  credy1 = 800;
   for(int i = 0; i < pisoY.length; i++){
     pisoY[i] = (i*20) + 40; 
   }
@@ -49,6 +49,10 @@ void draw(){
   
   else if(controls){
    controles(); 
+  }
+  
+  else if(credits){
+   creditos(); 
   }
   
 }

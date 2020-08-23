@@ -161,6 +161,10 @@ void inicio(){
     
     fill(100);
     rect(460,500,200,40);
+    if(mousePressed && mouseX <= 660 && mouseX >= 460 && mouseY <= 540 && mouseY >= 500){
+      start = false;
+      credits = true;
+    }
     fill(255);
     text("CREDITS",470,530); 
 }
@@ -183,3 +187,35 @@ void controles(){
   text("A",465,305);
   text("D",705,305);
 }
+
+void creditos(){
+  
+      pushMatrix();
+      credy2 -= 1;
+      translate(0,credy2);
+      background(0);
+      textSize(80);
+      text("CREDITOS", 470, credy1);
+      textSize(50);
+      text("Animacion", 530, credy1 +100);
+      textSize(40);
+      text("Nicolas Orcasitas Garcia", 400, credy1+150);
+      textSize(50);
+      text("Fuente de texto", 450, credy1+250);
+      textSize(40);
+      text("Ansimuz de laposte net", 410, credy1+300);
+      textSize(50);
+      text("Desarrollo codigo", 420, credy1+400);
+      textSize(40);
+      text("Nicolas Orcasitas Garcia", 400, credy1+450);
+      popMatrix();
+      textSize(30);
+      text("Q para ir atras", 20, 40);// si se quiere devolver 
+      
+      //si se presiona la "q" vuelve al menu de inicio
+      if(q){ 
+       credy2 = 0;
+       credits = false;
+       start = true;
+      }
+  }
