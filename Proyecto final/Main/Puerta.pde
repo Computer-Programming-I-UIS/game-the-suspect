@@ -2,7 +2,7 @@ class Puerta{
  float x,y,lx,ly,esp,vel,inx,ang = 0;
  
   Puerta(float posx, float posy, float angle){
-    lx = 50;
+    lx = 70;
     ly = 20;
     x = posx;
     y = posy;
@@ -13,6 +13,7 @@ class Puerta{
     pushMatrix();
     translate(x,y);
     rotate(ang);
+    fill(50);
     rect(0-(esp/2),0,lx,ly);
     rect(lx+(esp/2),0,lx,ly);
     popMatrix();
@@ -26,8 +27,8 @@ class Puerta{
      vel = -5; 
     }
     
-    if(esp >= 40){
-     esp = 40; 
+    if(esp >= 140){
+     esp = 140; 
     }
     if(esp <= 0){
      esp = 0; 

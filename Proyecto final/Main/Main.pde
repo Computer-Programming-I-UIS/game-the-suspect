@@ -3,7 +3,7 @@ float trax,tray,travx,travy = 0;
 int ny = 0;
 int nx = -1;
 Personaje p;
-Puerta puerta;
+Puerta[] puerta = new Puerta[1];
 Pared[] pa = new Pared[10];
 Puzzle pu;
 int[] pisoY = new int[30];
@@ -22,22 +22,24 @@ void setup(){
   for(int i = 0; i < pa.length; i++){
     pa[i] = new Pared(40*i,20,20,100);
   }
-  puerta = new Puerta(400,400,0);
+  puerta[0] = new Puerta (1180,270,PI/2);
 }
 
 void draw(){
   background(40);
-  /*piso();
+  piso();
   p.update();
   colision();
   
   niveles();
   for(int i = 0; i < pa.length; i++){
+    strokeWeight(1);
     pa[i].display();
   }
-  p.display();*/
   
-  puerta.display();
-  puerta.mov(a);
+  p.display();
+  
+  /*puerta.display();
+  puerta.mov(a);*/
   
 }

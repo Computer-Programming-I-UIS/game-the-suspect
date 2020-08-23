@@ -18,6 +18,7 @@ class Pared {
     textSize(14);
     text("frase:",110,70);
     fill(102,51,0);
+    strokeWeight(1);
     rect(x,y,rx,ry);
     
       

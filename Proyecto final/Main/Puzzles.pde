@@ -2,6 +2,7 @@ class Puzzle{
   float lp1,diamp1,xp1,yp1 = 0;
   float cuadp1, xlim, vlim, posx, posy = 0;
   int i, c = 0;
+  boolean com = false;
   PVector[] fichas = new PVector[8];  
   PVector spdx = new PVector(5,0);
   PImage[] monalisa = new PImage[8]; 
@@ -84,17 +85,19 @@ class Puzzle{
    
    p1move(posx+10, posy+10);
    
-  /* image(monalisa[0],fichas[0].x,fichas[0].y);
-   image(monalisa[1],fichas[1].x,fichas[1].y);
-   image(monalisa[2],fichas[3].x-2,fichas[3].y);
-   image(monalisa[3],fichas[4].x,fichas[4].y);
+   image(monalisa[0],fichas[0].x,fichas[0].y);
+   image(monalisa[1],fichas[4].x,fichas[4].y);
+   image(monalisa[2],fichas[3].x,fichas[3].y);
+   image(monalisa[3],fichas[6].x,fichas[6].y);
    image(monalisa[4],fichas[2].x,fichas[2].y);
-   image(monalisa[5],fichas[6].x,fichas[6].y);
-   image(monalisa[6],fichas[7].x,fichas[7].y);
-   image(monalisa[7],fichas[5].x,fichas[5].y);*/
+   image(monalisa[5],fichas[5].x,fichas[5].y);
+   image(monalisa[6],fichas[1].x,fichas[1].y);
+   image(monalisa[7],fichas[7].x,fichas[7].y);
    
-   for( int i=0; i<8; i++){
-     image(monalisa[i],fichas[i].x,fichas[i].y);}
+   check();
+   
+   /*for( int i=0; i<8; i++){
+     image(monalisa[i],fichas[i].x,fichas[i].y);}*/
      
    
  }
@@ -181,5 +184,22 @@ class Puzzle{
         }
       }
      }
+   }
+   
+   void check(){
+       if(fichas[0].x==posx+10           && fichas[0].y==posy+10 && 
+         fichas[4].x==posx+10+cuadp1     && fichas[4].y==posy+10 && 
+         fichas[3].x==posx+10            && fichas[3].y==posy+10+cuadp1 && 
+         fichas[6].x==posx+10+cuadp1     && fichas[6].y==posy+10+cuadp1 && 
+         fichas[2].x==posx+10+(2*cuadp1) && fichas[2].y==posy+10+cuadp1 && 
+         fichas[5].x==posx+10            && fichas[5].y==posy+10+(2*cuadp1) && 
+         fichas[1].x==posx+10+cuadp1     && fichas[1].y==posy+10+(2*cuadp1) && 
+         fichas[7].x==posx+10+(2*cuadp1) && fichas[7].y==posy+10+(2*cuadp1)){
+           
+          com = true;
+        }
+        else{
+         com = false; 
+        }
    }
 }

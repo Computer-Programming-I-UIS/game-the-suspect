@@ -80,7 +80,7 @@ void transicion(){
   
  trax += travx;
  tray += travy;
- noStroke();
+ //noStroke();
  rect(0,0,trax,height);
  rect(width - trax,0,trax,height);
  rect(0,0,width,tray);
@@ -113,7 +113,6 @@ void inip1(){
      }
      p.vx = 0;
      p.vy = 0;
-     //pu.p1();
    }
    else{
      textSize(15);
