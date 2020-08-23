@@ -96,13 +96,7 @@ void nivel00(){
     
    }
  }
- fill(200,0,0);
- rect(550,450,140,100);
- inip1();
  
- if(pu1){
-  pu.p1(); 
- }
 }
 
 
@@ -137,6 +131,14 @@ void nivelme10(){
      default:
      pa[i] = new Pared(0,0,0,0);
    }
+  }
+  
+  fill(200,0,0);
+  rect(550,450,140,100);
+  inip1();
+ 
+  if(pu1){
+   pu.p1(); 
   }
 }
 
