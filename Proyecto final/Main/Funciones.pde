@@ -136,6 +136,8 @@ void inip1(){
 void inicio(){
  
     background(0);
+    image(fondo,5,5);
+    fondo.resize(1240,720);
     image(titulo[anim],320,100);
     if(frameCount%15 == 0){
     anim = (anim+1)%titulo.length;}
@@ -184,10 +186,10 @@ void controles(){
   text("Q para ir atras", 20, 40);// si se quiere devolver
   fill(0);
   textSize(80);
-  text("W",585,185);
-  text("S",585,305);
-  text("A",465,305);
-  text("D",705,305);
+  text("W",587,185);
+  text("S",600,305);
+  text("A",475,305);
+  text("D",712,305);
   
 }
 

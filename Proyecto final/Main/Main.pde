@@ -8,9 +8,11 @@ Pared[] pa = new Pared[10];
 Puzzle pu;
 int[] pisoY = new int[30];
 PImage [] titulo = new PImage[3];
+PImage fondo;
 
 void setup(){
   size(1240,720);
+  fondo=loadImage("fondo.png");
   ny = 0;
   nx = -1;
   credy1 = 800;
