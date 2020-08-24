@@ -60,11 +60,11 @@ void nivel00(){
     break;
     
     case 1:
-    pa[i] = new Pared(20,20,20,235);//izquierda up
+    pa[i] = new Pared(20,20,20,250);//izquierda up
     break;
     
     case 2:
-    pa[i] = new Pared(20,385,20,265);//izquierda down
+    pa[i] = new Pared(20,410,20,250); // izquierda down
     break;
     
     case 3:
@@ -76,11 +76,11 @@ void nivel00(){
     break;
     
     case 5:
-    pa[i] = new Pared(1180,20,20,235);//derecha up
+    pa[i] = new Pared(1180,20,20,250);//derecha up
     break;
     
     case 6:
-    pa[i] = new Pared(1180,385,20,265); // derecha down
+    pa[i] = new Pared(1180,410,20,250); // derecha down
     break;
     
     default:
@@ -122,11 +122,11 @@ void nivelme10(){
    }
   }
   noFill();
-  pa[5] = new Pared(puerta[0].x-puerta[0].ly,puerta[0].y-puerta[0].esp/2,puerta[0].ly,puerta[0].lx);
+  /*pa[5] = new Pared(puerta[0].x-puerta[0].ly,puerta[0].y-puerta[0].esp/2,puerta[0].ly,puerta[0].lx);
   pa[6] = new Pared(puerta[0].x-puerta[0].ly,puerta[0].y+puerta[0].lx+puerta[0].esp/2,puerta[0].ly,puerta[0].lx);
   fill(50);
   puerta[0].display();
-  puerta[0].mov(pu.com);
+  puerta[0].mov(pu.com);*/
   
   fill(200,0,0);
   rect(550,450,140,100);// Botón
@@ -152,11 +152,11 @@ void nivelme11(){
       break;
          
       case 2:
-      pa[i] = new Pared(1180,20,20,235);//derecha up
+      pa[i] = new Pared(1180,20,20,250);//derecha up
       break;
       
       case 3:
-      pa[i] = new Pared(1180,385,20,265); // derecha down
+      pa[i] = new Pared(1180,410,20,250); // derecha down
       break;
       
       case 4:
@@ -181,11 +181,11 @@ void nivel01(){
     break;
     
     case 1:
-    pa[i] = new Pared(20,20,20,235);//izquierda up
+    pa[i] = new Pared(20,20,20,250);//izquierda up
     break;
     
     case 2:
-    pa[i] = new Pared(20,385,20,265);//izquierda down
+    pa[i] = new Pared(20,410,20,250); // izquierda down
     break;
     
     case 3:
@@ -193,11 +193,11 @@ void nivel01(){
     break;
     
     case 5:
-    pa[i] = new Pared(1180,20,20,235);//derecha up
+    pa[i] = new Pared(1180,20,20,250);//derecha up
     break;
     
     case 6:
-    pa[i] = new Pared(1180,385,20,265); // derecha down
+    pa[i] = new Pared(1180,410,20,250); // derecha down
     break;
     
     default:
@@ -219,11 +219,11 @@ void nivel10(){
      break;
      
      case 1:
-     pa[i] = new Pared(20,20,20,235);//izquierda up
+     pa[i] = new Pared(20,20,20,250);//izquierda up
      break;
      
      case 2:
-     pa[i] = new Pared(20,385,20,265);//izquierda down
+     pa[i] = new Pared(20,410,20,250); // izquierda down
      break;
      
      case 3:
@@ -257,11 +257,11 @@ void nivel11(){
      break;
      
      case 1:
-     pa[i] = new Pared(20,20,20,235);//izquierda up
+     pa[i] = new Pared(20,20,20,250);//izquierda up
      break;
      
      case 2:
-     pa[i] = new Pared(20,385,20,265);//izquierda down
+     pa[i] = new Pared(20,410,20,250); // izquierda down
      break;
      
      case 3:
