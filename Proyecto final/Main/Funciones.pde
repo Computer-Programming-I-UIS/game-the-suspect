@@ -125,10 +125,12 @@ void inip1(){
     
     if(playing1){
      textSize(15);
+     //ingame.play();
      fill(200,0,0);
      text("F para dejar de jugar",520,595);
      if(f== true && antf == false){
       playing1 = false;  
+      //mgame.play();
      }
      p.vx = 0;
      p.vy = 0;
@@ -140,6 +142,7 @@ void inip1(){
      if(f== true && antf == false){
        playing1 = true;
        pu1 = true;
+       mgame.play();
      }
      p.vx = 5;
      p.vy = 5;
@@ -149,7 +152,16 @@ void inip1(){
 }
 
 void inicio(){
- 
+  
+  if(introtime<=120){
+    introtime += 1;
+  }
+  introvol = map(introtime,1,120,-1,1);
+  if(introvol >= 0.9){
+    introvol = 0.9;
+  }
+  intro.amp(introvol);
+  print(introvol+" ; ");
     background(0);
     image(fondo,5,5);
     fondo.resize(1240,720);

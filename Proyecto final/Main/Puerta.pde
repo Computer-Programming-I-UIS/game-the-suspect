@@ -21,19 +21,25 @@ class Puerta{
   
   void mov(boolean t){
     if(t){
-      vel = 5;
+      vel = 1;
+      opendoor.play();
     }
     else {
-     vel = -5; 
+     vel = -1; 
+     
+     closedoor.play();
     }
     
     if(esp >= 140){
      esp = 140; 
+     opendoor.pause();
     }
     if(esp <= 0){
      esp = 0; 
+     closedoor.pause();
     }
-    
+    //opendoor.loop();
+    //closedoor.loop();
     esp += vel;
     
   }

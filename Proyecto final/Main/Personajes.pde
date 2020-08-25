@@ -34,8 +34,10 @@ class Personaje{
   }
   
   void display(){
-    
+    pasos.pause();
       if(a || s || w ||d){
+        
+        pasos.play();
         
         if(count==0){
         image(personaje[animacion],x,y);
