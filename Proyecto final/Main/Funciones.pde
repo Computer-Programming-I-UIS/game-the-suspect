@@ -73,18 +73,14 @@ void cambio(){
 void transicion(){
   
   if(trax >= width/2){
-    travx = -travx;
-    travy = -travy;
-  }
-  if(trax <= 0){
-   trax = 0;
-   tray = 0;
-   tra = false;
+    travx = 0;
+    travy = 0;
+    tra = false;
   }
   
  trax += travx;
  tray += travy;
- //noStroke();
+ noStroke();
  rect(0,0,trax,height);
  rect(width - trax,0,trax,height);
  rect(0,0,width,tray);
@@ -223,4 +219,18 @@ void creditos(){
        credits = false;
        start = true;
       }
+  }
+  
+  
+  void kill(boolean cond){
+    if(cond){
+      fill(255);
+     transicion();
+     tim += 1;
+     if(tim >= 90){
+       textSize(150);
+       fill(0);
+       text("Game Over",200,400);
+     }
+    }
   }

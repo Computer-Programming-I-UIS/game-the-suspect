@@ -1,6 +1,6 @@
 boolean a,w,s,d,f,q,tra,playing1,pu1,antf,enter,game,controls,credits = false;
 boolean start = true;
-float trax,tray,travx,travy,credy1,credy2 = 0;
+float trax,tray,travx,travy,credy1,credy2,tim = 0;
 int ny,nx,anim = 0;
 Personaje p;
 Puerta[] puerta = new Puerta[1];
@@ -48,6 +48,7 @@ void draw(){
     }
     
     p.display();
+    kill(pu.min >= 2);
   }
   
   else if(controls){
@@ -57,5 +58,7 @@ void draw(){
   else if(credits){
    creditos(); 
   }
+  
+  
   
 }

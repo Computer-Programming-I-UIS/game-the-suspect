@@ -1,7 +1,7 @@
 class Puzzle{
   float lp1,diamp1,xp1,yp1 = 0;
-  float cuadp1, xlim, vlim, posx, posy = 0;
-  int i, c = 0;
+  float cuadp1, xlim, vlim, posx, posy,time = 0;
+  int i, c,seg, min = 0;
   boolean com = false;
   PVector[] fichas = new PVector[8];  
   PVector spdx = new PVector(5,0);
@@ -84,6 +84,19 @@ class Puzzle{
    image(cuadro,1000,80);
    
    p1move(posx+10, posy+10);
+   
+   if(frameCount%60 == 0){
+    seg += 1; 
+   }
+   if(seg >= 60){
+    seg = 0;
+    min += 1;
+   }
+   fill(255);
+   rect(50,560,80,50);
+   textSize(30);
+   fill(0);
+   text(min + ":" + seg,60,600);
    
    image(monalisa[0],fichas[0].x,fichas[0].y);
    image(monalisa[1],fichas[4].x,fichas[4].y);

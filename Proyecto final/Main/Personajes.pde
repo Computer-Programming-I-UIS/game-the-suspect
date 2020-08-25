@@ -73,4 +73,6 @@ class Personaje{
     x += vx*dx;
     y += vy*dy;
   }
+  
+  
 }
