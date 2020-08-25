@@ -3,7 +3,7 @@ import processing.sound.*;
 
 boolean a,w,s,d,f,q,tra,playing1,pu1,antf,enter,game,controls,credits = false;
 boolean start = true;
-boolean t,y,u,r,o,g,h,j,k,l=false;
+boolean t,y,u,r,o,g,h,j,k,l,z=false;
 float trax,tray,travx,travy,credy1,credy2,tim,introtime,introvol = 0;
 int ny,nx,anim = 0;
 Personaje p;

@@ -7,6 +7,7 @@ class Puzzle{
   PVector spdx = new PVector(5,0);
   PImage[] monalisa = new PImage[8]; 
   PImage cuadro;
+  int operacion=0;
   
  Puzzle(float posxx, float posyy){
    lp1 = 30;
@@ -204,6 +205,7 @@ class Puzzle{
        rect(i*70,500,55,55);
         }
          
+         if (playing1){
          textSize(20);
         if(t){ 
          fill(0);
@@ -284,9 +286,17 @@ class Puzzle{
          }
          else{
          fill(200,0,0);
-        text("l",723,530);}
+         text("l",723,530);}
+        
+        fill(0); 
+        rect(520,265,150,150);
+        
          
-         
+        
+  
+              
+        
+ }
          
         /*
          text("T",443,180);

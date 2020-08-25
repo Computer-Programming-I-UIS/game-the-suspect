@@ -18,7 +18,7 @@ void keyPressed(){
  if(key == 'j' || key == 'J') {j = true;t=false;y=false;u=false;r=false;o=false;g=false;h=false;k=false;l=false;}
  if(key == 'k' || key == 'K') {k = true;t=false;y=false;u=false;r=false;o=false;g=false;h=false;j=false;l=false;}
  if(key == 'l' || key == 'L') {l = true;t=false;y=false;u=false;r=false;o=false;g=false;h=false;j=false;k=false;}
-  
+ if(key == 'z' || key == 'Z') {z = true;}
 }
 
 void keyReleased(){
@@ -265,3 +265,35 @@ void creditos(){
      }
     }
   }
+  
+  void inip2(){
+ 
+  if(p.x > 180 && p.x < 250 && p.y < 290 && p.y > 245){
+    
+    if(playing1){
+     textSize(15);
+     //ingame.play();
+     fill(250);
+     text("F para dejar de jugar",175,238);
+     if(f== true && antf == false){
+      playing1 = false;  
+      //mgame.play();
+     }
+     p.vx = 0;
+     p.vy = 0;
+   }
+   else{
+     textSize(15);
+     fill(250);
+     text("F para jugar",175,238);
+     if(f== true && antf == false){
+       playing1 = true;
+       pu1 = true;
+       mgame.play();
+     }
+     p.vx = 5;
+     p.vy = 5;
+   }
+   antf = f;
+  }
+}
