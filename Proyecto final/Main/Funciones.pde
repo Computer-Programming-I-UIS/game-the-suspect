@@ -8,6 +8,16 @@ void keyPressed(){
  if(key == 'f' || key == 'F') {f = true;}
  if(keyCode == ENTER){ enter = true;}
  if(key == 'q' || key == 'Q') {q = true;}
+ if(key == 't' || key == 'T') {t = true;y=false;u=false;r=false;o=false;g=false;h=false;j=false;k=false;l=false;}
+ if(key == 'y' || key == 'Y') {y = true;t=false;u=false;r=false;o=false;g=false;h=false;j=false;k=false;l=false;}
+ if(key == 'u' || key == 'U') {u = true;t=false;y=false;r=false;o=false;g=false;h=false;j=false;k=false;l=false;}
+ if(key == 'r' || key == 'R') {r = true;t=false;y=false;u=false;o=false;g=false;h=false;j=false;k=false;l=false;}
+ if(key == 'o' || key == 'O') {o = true;t=false;y=false;u=false;r=false;g=false;h=false;j=false;k=false;l=false;}
+ if(key == 'g' || key == 'G') {g = true;t=false;y=false;u=false;r=false;o=false;h=false;j=false;k=false;l=false;}
+ if(key == 'h' || key == 'H') {h = true;t=false;y=false;u=false;r=false;o=false;g=false;j=false;k=false;l=false;}
+ if(key == 'j' || key == 'J') {j = true;t=false;y=false;u=false;r=false;o=false;g=false;h=false;k=false;l=false;}
+ if(key == 'k' || key == 'K') {k = true;t=false;y=false;u=false;r=false;o=false;g=false;h=false;j=false;l=false;}
+ if(key == 'l' || key == 'L') {l = true;t=false;y=false;u=false;r=false;o=false;g=false;h=false;j=false;k=false;}
   
 }
 
@@ -19,7 +29,16 @@ void keyReleased(){
  if(key == 'f' || key == 'F') {f = false;}
  if(keyCode == ENTER){ enter = false;}
  if(key == 'q' || key == 'Q') {q = false;}
-  
+ /*if(key == 't' || key == 'T') {t=false;}
+ if(key == 'y' || key == 'Y') {y=false;}
+ if(key == 'u' || key == 'U') {u=false;}
+ if(key == 'r' || key == 'R') {r=false;}
+ if(key == 'o' || key == 'O') {o=false;}
+ if(key == 'g' || key == 'G') {g=false;}
+ if(key == 'h' || key == 'H') {h=false;}
+ if(key == 'j' || key == 'J') {j=false;}
+ if(key == 'k' || key == 'K') {k=false;}
+ if(key == 'l' || key == 'L') {l=false;}*/
 }
 
 
