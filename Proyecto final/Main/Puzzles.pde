@@ -202,11 +202,11 @@ class Puzzle{
          
        for( int i=6; i<11; i++){
        rect(i*70,500,55,55);
-       }
+        }
          
          textSize(20);
         if(t){ 
-         fill(200,0,0);
+         fill(0);
          text("5",443,180);
          
          }
@@ -215,7 +215,7 @@ class Puzzle{
          text("t",443,180);}
          
         if(y){ 
-         fill(200,0,0);
+         fill(0);
           text("1",513,180);
          }
          else{
@@ -223,7 +223,7 @@ class Puzzle{
           text("y",513,180);}
          
         if(u){ 
-         fill(200,0,0);
+         fill(0);
           text("6",583,180);
          }
          else{
@@ -231,7 +231,7 @@ class Puzzle{
           text("u",583,180);}
          
         if(r){ 
-         fill(200,0,0);
+         fill(0);;
           text("3",653,180);
          }
          else{
@@ -239,7 +239,7 @@ class Puzzle{
          text("r",653,180);}
          
         if(o){ 
-         fill(200,0,0);
+         fill(0);
          text("4",723,180);
          }
          else{
@@ -247,7 +247,7 @@ class Puzzle{
          text("o",723,180);}
          
           if(g){ 
-         fill(200,0,0);
+         fill(0);
          text("2",443,530);
          }
          else{
@@ -255,7 +255,7 @@ class Puzzle{
          text("g",443,530);}
          
           if(h){ 
-         fill(200,0,0);
+         fill(0);
          text("7",513,530);
          }
          else{
@@ -263,7 +263,7 @@ class Puzzle{
           text("h",513,530);}
          
           if(j){ 
-         fill(200,0,0);
+         fill(0);
          text("9",583,530);
          }
          else{
@@ -271,7 +271,7 @@ class Puzzle{
          text("j",583,530);}
          
          if(k){ 
-         fill(200,0,0);
+         fill(0);
          text("0",653,530);
          }
          else{
@@ -279,7 +279,7 @@ class Puzzle{
          text("k",653,530);}
          
          if(l){ 
-         fill(200,0,0);
+         fill(0);
          text("8",723,530);
          }
          else{
