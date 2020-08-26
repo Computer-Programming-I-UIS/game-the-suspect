@@ -9,7 +9,7 @@ class Puzzle{
   PImage cuadro;
   int mate=0;
   PImage operacion;
-  int error=0;
+  int desorden=0;
   
  Puzzle(float posxx, float posyy){
    lp1 = 30;
@@ -73,6 +73,7 @@ class Puzzle{
    fill(0);
    text(min + ":" + seg,60,600);
    
+   if(desorden==0){
    image(monalisa[0],fichas[0].x,fichas[0].y);
    image(monalisa[1],fichas[4].x,fichas[4].y);
    image(monalisa[2],fichas[3].x,fichas[3].y);
@@ -80,12 +81,13 @@ class Puzzle{
    image(monalisa[4],fichas[2].x,fichas[2].y);
    image(monalisa[5],fichas[5].x,fichas[5].y);
    image(monalisa[6],fichas[1].x,fichas[1].y);
-   image(monalisa[7],fichas[7].x,fichas[7].y);
+   image(monalisa[7],fichas[7].x,fichas[7].y);}
    
    check();
    
-   /*for( int i=0; i<8; i++){
-     image(monalisa[i],fichas[i].x,fichas[i].y);}*/
+   if(desorden==1){
+   for( int i=0; i<8; i++){
+     image(monalisa[i],fichas[i].x,fichas[i].y);}}
      
    
  }
@@ -175,15 +177,18 @@ class Puzzle{
    }
    
    void check(){
-       if(fichas[0].x==posx+10           && fichas[0].y==posy+10 && 
+       if( 
+         fichas[0].x==posx+10           && fichas[0].y==posy+10 && 
          fichas[4].x==posx+10+cuadp1     && fichas[4].y==posy+10 && 
          fichas[3].x==posx+10            && fichas[3].y==posy+10+cuadp1 && 
          fichas[6].x==posx+10+cuadp1     && fichas[6].y==posy+10+cuadp1 && 
          fichas[2].x==posx+10+(2*cuadp1) && fichas[2].y==posy+10+cuadp1 && 
          fichas[5].x==posx+10            && fichas[5].y==posy+10+(2*cuadp1) && 
          fichas[1].x==posx+10+cuadp1     && fichas[1].y==posy+10+(2*cuadp1) && 
-         fichas[7].x==posx+10+(2*cuadp1) && fichas[7].y==posy+10+(2*cuadp1)){
+         fichas[7].x==posx+10+(2*cuadp1) && fichas[7].y==posy+10+(2*cuadp1)
+         ){
            
+       mate=0;
        fill(200);  
        textSize(14);
        text("1frase",110,100);
@@ -198,8 +203,10 @@ class Puzzle{
    
     void p2()
    {
-  
+        
+           
      if (playing1){
+      
        fill(200);  
        textSize(14);
        text("1frase",110,100);  
@@ -329,16 +336,29 @@ class Puzzle{
         text("2frase",110,120); 
         com2=true;}
         
-        
   
         if(key == 'a'||key == 'b'||key == 'c'||key == 'd'||key == 'z'||key == 'x'||key == 'v'||key == 'm' ){
         mate=2;  
         textSize(40);
         text("game over",490,360);
+        playing1=false;
+        p.vx=5;
+        p.vy=5;
+        desorden=0;
+        
+       
         }
         
        
    }  
+   
+   
+   
+   if(mate==2){ny=0;  nx=-1; }
+       
+    
+   
+   
           
        if(frameCount%60 == 0){
         seg += 1; 

@@ -142,7 +142,7 @@ void nivel00(){
   fill(200,0,0);
   rect(200,280,80,80);// Botón
   inip2();
- 
+  
   if(pu1){
    pu.p2(); 
   }
@@ -182,12 +182,17 @@ void nivelme10(){
      pa[i] = new Pared(0,0,0,0);
    }
   }
+   fill(0);
+    rect(100,50,140,35);
+    fill(255);
+    textSize(14);
+    text("frase:",110,70);
   noFill();
-  /*pa[5] = new Pared(puerta[0].x-puerta[0].ly,puerta[0].y-puerta[0].esp/2,puerta[0].ly,puerta[0].lx);
+  pa[5] = new Pared(puerta[0].x-puerta[0].ly,puerta[0].y-puerta[0].esp/2,puerta[0].ly,puerta[0].lx);
   pa[6] = new Pared(puerta[0].x-puerta[0].ly,puerta[0].y+puerta[0].lx+puerta[0].esp/2,puerta[0].ly,puerta[0].lx);
   fill(50);
   puerta[0].display();
-  puerta[0].mov(pu.com);*/
+  puerta[0].mov(pu.com);
  // puerta[0].mov(key == ' ');
   
   fill(200,0,0);
@@ -229,7 +234,11 @@ void nivelme11(){
       default:
       pa[i] = new Pared(0,0,0,0);
     }
-    
+     fill(0);
+    rect(100,50,140,35);
+    fill(255);
+    textSize(14);
+    text("frase:",110,70);
   }
 }
 
@@ -267,7 +276,11 @@ void nivel01(){
     pa[i] = new Pared(0,0,0,0);
     
    }
-   
+    fill(0);
+    rect(100,50,140,35);
+    fill(255);
+    textSize(14);
+    text("frase:",110,70);
  }
   
 }
@@ -305,6 +318,11 @@ void nivel10(){
      default:
      pa[i] = new Pared(0,0,0,0);
     }
+     fill(0);
+    rect(100,50,140,35);
+    fill(255);
+    textSize(14);
+    text("frase:",110,70);
     pu.p3();
   }
 }
@@ -344,5 +362,10 @@ void nivel11(){
      default:
      pa[i] = new Pared(0,0,0,0);
     }
+     fill(0);
+    rect(100,50,140,35);
+    fill(255);
+    textSize(14);
+    text("frase:",110,70);
   }
 }
