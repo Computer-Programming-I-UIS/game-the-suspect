@@ -85,9 +85,10 @@ class Puzzle{
    
    check();
    
-   if(desorden==1){
+ /* if(desorden==1){
    for( int i=0; i<8; i++){
-     image(monalisa[i],fichas[i].x,fichas[i].y);}}
+     image(monalisa[i],fichas[i].x,fichas[i].y);}
+   com=false;}*/
      
    
  }
@@ -187,7 +188,7 @@ class Puzzle{
          fichas[1].x==posx+10+cuadp1     && fichas[1].y==posy+10+(2*cuadp1) && 
          fichas[7].x==posx+10+(2*cuadp1) && fichas[7].y==posy+10+(2*cuadp1)
          ){
-           
+          
        mate=0;
        fill(200);  
        textSize(14);
@@ -203,7 +204,7 @@ class Puzzle{
    
     void p2()
    {
-        
+       
            
      if (playing1){
       
@@ -312,10 +313,10 @@ class Puzzle{
         fill(255);       
         if(mate==0){
         image(operacion,470,235);
-        text("a) 30",460,340);
+        text("q) 30",460,340);
         text("b) 27/2",460,380);
         text("c) 40/9",460,420);
-        text("d) 12/5",560,340);
+        text("e) 12/5",560,340);
         text("z) 22",560,380);
         text("x) 51/2",560,420);
         text("n) 29/2",660,340);
@@ -334,10 +335,10 @@ class Puzzle{
         fill(200);
         textSize(14);
         text("2frase",110,120); 
-        com2=true;}
+        }
         
   
-        if(key == 'a'||key == 'b'||key == 'c'||key == 'd'||key == 'z'||key == 'x'||key == 'v'||key == 'm' ){
+        if(key == 'q'||key == 'b'||key == 'c'||key == 'e'||key == 'z'||key == 'x'||key == 'v'||key == 'm' ){
         mate=2;  
         textSize(40);
         text("game over",490,360);
@@ -352,9 +353,11 @@ class Puzzle{
        
    }  
    
+   if(mate==1){com2=true;}
    
+   if(mate==2){ny=0;  nx=-1;
+ com=false;}
    
-   if(mate==2){ny=0;  nx=-1; }
        
     
    

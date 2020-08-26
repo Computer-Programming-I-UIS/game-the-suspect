@@ -305,6 +305,9 @@ void creditos(){
      //ingame.play();
      fill(250);
      text("F para dejar de jugar",175,238);
+     textSize(12);
+     text("oprime la tecla correspondiente a cada cuadro para ver su valor",430,113);
+     text("oprime la tecla correspondiente a la respuesta que desea seleccionar",430,137);
      if(f== true && antf == false){
       playing1 = false;  
       mgame.pause();
