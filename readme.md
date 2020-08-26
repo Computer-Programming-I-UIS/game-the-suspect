@@ -22,6 +22,8 @@ En el juego:
 
 ![./SuspectGame.png](./SuspectGame.png)
 
+![](SuspectGif.gif)
+
 ## **Características**: 
 
 The Suspect es un juego para una persona, la cual juega con el personaje de un detective que se mueve usando las teclas 'w', 'a', 's', 'd'
