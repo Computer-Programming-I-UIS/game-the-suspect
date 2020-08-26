@@ -5,6 +5,7 @@ THE SUSPECT
 ## **Hecho por**
 	
 Nicolas Orcasitas-2190418
+
 Raul Andres Hincapie Hernandez-2192559
 
 ## **Descripción**: 
@@ -23,6 +24,10 @@ En el juego:
 
 ## **Características**: 
 
+The Suspect es un juego para una persona, la cual juega con el personaje de un detective que se mueve usando las teclas 'w', 'a', 's', 'd'
 
+Cada nivel es un nuevo desafio mental que debe superar, si se equivoca en alguno de estos desfios vuelve al comienzo del juego
+
+Ademas tiene un tiempo limite para pasar todos los niveles, sino "Game Over"
 
 
