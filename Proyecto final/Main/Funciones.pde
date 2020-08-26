@@ -124,12 +124,22 @@ void inip1(){
   if(p.x > 550 && p.x < 690 && p.y > 350){
     
     if(playing1){
+      
+      if(tras3 >= 0){
+       tras3 -= 0.5; 
+      }
+     fill(255,tras3);
+     textSize(30);
+     text("Click sobre la ficha que quieres",80,200);
+     text("mover, y muevela con las teclas", 80, 250);
+     text("de movimiento o las flechas", 80, 300);
      textSize(15);
      //ingame.play();
      fill(200,0,0);
      text("F para dejar de jugar",520,595);
      if(f== true && antf == false){
-      playing1 = false;  
+      playing1 = false;
+      mgame.pause();
       //mgame.play();
      }
      p.vx = 0;
@@ -148,6 +158,10 @@ void inip1(){
      p.vy = 5;
    }
    antf = f;
+  }
+  
+  if(pu.com){
+   mgame.pause(); 
   }
 }
 
@@ -290,6 +304,7 @@ void creditos(){
      text("F para dejar de jugar",175,238);
      if(f== true && antf == false){
       playing1 = false;  
+      mgame.pause();
       //mgame.play();
      }
      p.vx = 0;

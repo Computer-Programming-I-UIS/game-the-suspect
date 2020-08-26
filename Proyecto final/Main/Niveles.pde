@@ -159,7 +159,7 @@ void nivelme10(){
      break;
      
      case 1:
-     pa[i] = new Pared(20,20,20,250);//izquierda up
+     pa[i] = new Pared(20,20,20,640);//izquierda up
      break;
      
      case 2:
@@ -202,6 +202,8 @@ void nivelme10(){
   if(pu1){
    pu.p1(); 
   }
+  
+  
 }
 
 void nivelme11(){
