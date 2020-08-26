@@ -92,7 +92,7 @@ void nivel00(){
   pa[8] = new Pared(puerta[0].x-puerta[0].ly,puerta[0].y+puerta[0].lx+puerta[0].esp/2,puerta[0].ly,puerta[0].lx);
   fill(50);
   puerta[0].display();
-  puerta[0].mov(pu.com);
+  puerta[0].mov(pu.com2);
   //pu.p2();
   fill(200,0,0);
   rect(200,280,80,80);// Botón
@@ -138,8 +138,8 @@ void nivelme10(){
   pa[6] = new Pared(puerta[0].x-puerta[0].ly,puerta[0].y+puerta[0].lx+puerta[0].esp/2,puerta[0].ly,puerta[0].lx);
   fill(50);
   puerta[0].display();
-  puerta[0].mov(pu.com);
-  puerta[0].mov(key == ' ');*/
+  puerta[0].mov(pu.com);*/
+ // puerta[0].mov(key == ' ');
   
   fill(200,0,0);
   rect(550,450,140,100);// Botón
@@ -180,6 +180,7 @@ void nivelme11(){
       default:
       pa[i] = new Pared(0,0,0,0);
     }
+    
   }
 }
 
@@ -217,6 +218,7 @@ void nivel01(){
     pa[i] = new Pared(0,0,0,0);
     
    }
+   
  }
   
 }
@@ -254,6 +256,7 @@ void nivel10(){
      default:
      pa[i] = new Pared(0,0,0,0);
     }
+    pu.p3();
   }
 }
 

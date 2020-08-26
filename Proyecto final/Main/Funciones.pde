@@ -232,6 +232,7 @@ void creditos(){
       text("Animacion", 530, credy1 +100);
       textSize(40);
       text("Nicolas Orcasitas Garcia", 400, credy1+150);
+      text("Raul Andres Hincapie Hernandez", 400, credy1+190);
       textSize(50);
       text("Fuente de texto", 450, credy1+250);
       textSize(40);
@@ -240,6 +241,7 @@ void creditos(){
       text("Desarrollo codigo", 420, credy1+400);
       textSize(40);
       text("Nicolas Orcasitas Garcia", 400, credy1+450);
+      text("Raul Andres Hincapie Hernandez", 400, credy1+490);
       popMatrix();
       textSize(30);
       text("Q para ir atras", 20, 40);// si se quiere devolver 

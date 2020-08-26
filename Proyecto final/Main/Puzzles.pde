@@ -2,12 +2,14 @@ class Puzzle{
   float lp1,diamp1,xp1,yp1 = 0;
   float cuadp1, xlim, vlim, posx, posy,time = 0;
   int i, c,seg, min = 0;
-  boolean com = false;
+  boolean com,com2 = false;
   PVector[] fichas = new PVector[8];  
   PVector spdx = new PVector(5,0);
   PImage[] monalisa = new PImage[8]; 
   PImage cuadro;
-  int operacion=0;
+  int mate=0;
+  PImage operacion;
+  int error=0;
   
  Puzzle(float posxx, float posyy){
    lp1 = 30;
@@ -21,6 +23,7 @@ class Puzzle{
    posy = posyy;
    cuadro=loadImage("monalisa.png"); 
    cuadro.resize(100,100);
+   operacion=loadImage("operacion.png");
    
    for(int i = 0; i < monalisa.length; i++){
     monalisa[i] = loadImage("monalisa" + i + ".png"); 
@@ -181,6 +184,10 @@ class Puzzle{
          fichas[1].x==posx+10+cuadp1     && fichas[1].y==posy+10+(2*cuadp1) && 
          fichas[7].x==posx+10+(2*cuadp1) && fichas[7].y==posy+10+(2*cuadp1)){
            
+       fill(200);  
+       textSize(14);
+       text("1frase",110,100);
+           
           com = true;
         }
         else{
@@ -192,9 +199,11 @@ class Puzzle{
     void p2()
    {
   
+     if (playing1){
        fill(200);  
        textSize(14);
-       text("felicidades",110,100);  
+       text("1frase",110,100);  
+       
        
        
        for( int i=6; i<11; i++){
@@ -205,7 +214,7 @@ class Puzzle{
        rect(i*70,500,55,55);
         }
          
-         if (playing1){
+         
          textSize(20);
         if(t){ 
          fill(0);
@@ -288,15 +297,62 @@ class Puzzle{
          fill(200,0,0);
          text("l",723,530);}
         
-        fill(0); 
-        rect(520,265,150,150);
         
+        
+        fill(0); 
+        rect(420,235,350,240);      
+        
+        fill(255);       
+        if(mate==0){
+        image(operacion,470,235);
+        text("a) 30",460,340);
+        text("b) 27/2",460,380);
+        text("c) 40/9",460,420);
+        text("d) 12/5",560,340);
+        text("z) 22",560,380);
+        text("x) 51/2",560,420);
+        text("n) 29/2",660,340);
+        text("v) 18/3",660,380);
+        text("m) 33/2",660,420);
+        textSize(12);
+        text("tienes una oportuniadad",520,460);
+      
+      }
          
         
-  
-              
+       if(key == 'n'){
+        mate=1;
+        textSize(40);
+        text("¡Bien hecho!",490,360);
+        fill(200);
+        textSize(14);
+        text("2frase",110,120); 
+        com2=true;}
         
- }
+        
+  
+        if(key == 'a'||key == 'b'||key == 'c'||key == 'd'||key == 'z'||key == 'x'||key == 'v'||key == 'm' ){
+        mate=2;  
+        textSize(40);
+        text("game over",490,360);
+        }
+        
+       
+   }  
+          
+       if(frameCount%60 == 0){
+        seg += 1; 
+       }
+       if(seg >= 60){
+        seg = 0;
+        min += 1;
+       }
+       
+       fill(255);
+       rect(50,560,80,50);
+       textSize(30);
+       fill(0);
+       text(min + ":" + seg,60,600);    
          
         /*
          text("T",443,180);
@@ -310,9 +366,16 @@ class Puzzle{
          text("j",583,530);
          text("k",653,530);
          text("l",723,530);*/
+       
+}
+  
     
-         
-          
-   }
+  void p3(){
+    fill(200);  
+    textSize(14);
+    text("1frase",110,100);
+    text("2frase",110,120);
+    
+  }
    
 }
