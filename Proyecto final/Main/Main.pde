@@ -14,6 +14,7 @@ Puzzle pu;
 int[] pisoY = new int[30];
 PImage [] titulo = new PImage[3];
 PImage fondo;
+PImage edad;
 
 Minim minim;
 AudioPlayer opendoor;
@@ -29,6 +30,8 @@ void setup(){
   size(1240,720);
   
   fondo=loadImage("fondo.png");
+  edad = loadImage("+10 juegos.png");
+  edad.resize(80,80);
   minim = new Minim(this);
   opendoor = minim.loadFile("Puerta.mp3");
   closedoor = minim.loadFile("Puerta.mp3");

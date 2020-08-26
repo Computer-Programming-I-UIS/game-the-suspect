@@ -26,10 +26,16 @@ En el juego:
 
 ## **Características**: 
 
+Es un juego recomendado para maypres de 10 años, ya que tiene cierto grado de complejidad matematica
+
 The Suspect es un juego para una persona, la cual juega con el personaje de un detective que se mueve usando las teclas 'w', 'a', 's', 'd'
 
 Cada nivel es un nuevo desafio mental que debe superar, si se equivoca en alguno de estos desfios vuelve al comienzo del juego
 
 Ademas tiene un tiempo limite para pasar todos los niveles, sino "Game Over"
+
+Los sonidos fueron sacados de: http://sonidosmp3gratis.com/puerta-corredera
+
+Las canciones fueron hechas por "Robert Orcasitas Garcia"
 
 

@@ -210,6 +210,9 @@ void inicio(){
     }
     fill(255);
     text("CREDITOS",470,530); 
+    
+    
+    image(edad,20,620);
 }
 
 void controles(){
