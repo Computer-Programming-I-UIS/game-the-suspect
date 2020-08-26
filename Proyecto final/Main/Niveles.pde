@@ -22,6 +22,9 @@ void niveles(){
        nivel10();
        break;
        
+       case -2:
+       nivelme20();
+       
        default :
     }
     break;
@@ -50,6 +53,52 @@ void niveles(){
   } 
 }
 
+void nivelme20(){
+  pa[0] = new Pared(20,640,1180,20);//pared inferior horizontal
+  pa[1] = new Pared(1180,20,20,250);//derecha up
+  pa[2] = new Pared(1180,410,20,250); // derecha down
+  pa[3] = new Pared(20,20,20,640);//izquierda
+  pa[4] = new Pared(20,20, 1180,20);//superior
+  
+  if(p.movi){
+    tras1 -= 4;
+  }
+  if(tras1 >= 0){
+  fill(255,tras1);
+  textSize(40);
+   text("Te puedes mover usando las teclas 'w', 'a', 's', 'd'",50,100);
+  }
+  else {
+   fill(255,0,0,tras2);
+  rect(900,300,100,100);
+  fill(255,tras2);
+  textSize(30);
+  text("Para interactuar con los botones rojos",200,200);
+  text("presiona 'f' cuando estes encima de ellos",200,250);
+  if(tras2 <= 255){
+    tras2+=4;
+  }
+  }
+  
+  
+  
+  pa[7] = new Pared(puerta[0].x-puerta[0].ly,puerta[0].y-puerta[0].esp/2,puerta[0].ly,puerta[0].lx);
+  pa[8] = new Pared(puerta[0].x-puerta[0].ly,puerta[0].y+puerta[0].lx+puerta[0].esp/2,puerta[0].ly,puerta[0].lx);
+  fill(50);
+  puerta[0].display();
+  puerta[0].mov(intropuert);
+  
+  if(p.x >= 900 && p.x <= 1000 && p.y+p.ry >= 300 && p.y + p.ry <=400){
+    
+   if(f==true && antf == false){
+    intropuert = true; 
+   }
+   antf = f;
+  }
+  
+}
+
+
 void nivel00(){
  for(int i = 0; i < pa.length; i++){
    strokeWeight(1);
@@ -69,10 +118,6 @@ void nivel00(){
     
     case 3:
     pa[i] = new Pared(20,20, 1180,20);//superior left
-    break;
-    
-    case 4:
-    pa[i] = new Pared(700,20,500,20);//superior rigth
     break;
     
     case 5:
@@ -114,7 +159,7 @@ void nivelme10(){
      break;
      
      case 1:
-     pa[i] = new Pared(20,20,20,640);//izquierda
+     pa[i] = new Pared(20,20,20,250);//izquierda up
      break;
      
      case 2:
@@ -127,6 +172,10 @@ void nivelme10(){
      
      case 4:
      pa[i] = new Pared(20,20, 1180,20);//superior
+     break;
+     
+     case 5:
+     pa[i] = new Pared(20,410,20,250); // izquierda down
      break;
      
      default:

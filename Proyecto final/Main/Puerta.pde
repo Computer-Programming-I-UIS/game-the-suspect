@@ -22,6 +22,7 @@ class Puerta{
   void mov(boolean t){
     if(t){
       vel = 1;
+      opendoor.setGain(-15);
       opendoor.play();
     }
     else {

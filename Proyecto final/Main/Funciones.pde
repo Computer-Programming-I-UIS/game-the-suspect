@@ -154,9 +154,9 @@ void inip1(){
 void inicio(){
   
   if(introtime<=120){
-    introtime += 1;
+    introtime += 0.5;
   }
-  introvol = map(introtime,1,120,-1,1);
+  introvol = map(introtime,1,120,0,1);
   if(introvol >= 0.9){
     introvol = 0.9;
   }
@@ -177,7 +177,7 @@ void inicio(){
     }
     rect(460,300,200,40);
     fill(255);
-    text("START",470,330);
+    text("JUGAR",470,330);
     
     fill(100);
     rect(460,400,200,40);
@@ -186,7 +186,7 @@ void inicio(){
       controls = true;
     }
     fill(255);
-    text("CONTROLS",470,430);
+    text("CONTROLES",470,430);
     
     fill(100);
     rect(460,500,200,40);
@@ -195,7 +195,7 @@ void inicio(){
       credits = true;
     }
     fill(255);
-    text("CREDITS",470,530); 
+    text("CREDITOS",470,530); 
 }
 
 void controles(){
@@ -222,6 +222,17 @@ void controles(){
 
 void creditos(){
   
+  if(introtime>=0){
+    introtime -= 0.5;
+  }
+  introvol = map(introtime,1,120,0,1);
+  credvol = map(introtime,120,1,-40,-1);
+  if(introvol >= 0.9){
+    introvol = 0.9;
+  }
+  intro.amp(introvol);
+  cred.setGain(credvol);
+  
       pushMatrix();
       credy2 -= 1;
       translate(0,credy2);
@@ -234,11 +245,11 @@ void creditos(){
       text("Nicolas Orcasitas Garcia", 400, credy1+150);
       text("Raul Andres Hincapie Hernandez", 400, credy1+190);
       textSize(50);
-      text("Fuente de texto", 450, credy1+250);
+      text("Pintura", 450, credy1+250);
       textSize(40);
-      text("Ansimuz de laposte net", 410, credy1+300);
+      text("Leonardo Da Vinci", 410, credy1+300);
       textSize(50);
-      text("Desarrollo codigo", 420, credy1+400);
+      text("Desarrollo código", 420, credy1+400);
       textSize(40);
       text("Nicolas Orcasitas Garcia", 400, credy1+450);
       text("Raul Andres Hincapie Hernandez", 400, credy1+490);

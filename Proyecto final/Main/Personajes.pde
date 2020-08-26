@@ -1,6 +1,7 @@
 class Personaje{
  float x,y,rx,ry = 0;
  float vx,vy,dx,dy = 0;
+ boolean movi = false;
  int imagenes = 3;
  int animacion = 0;
  PImage [] personaje = new PImage[imagenes];
@@ -36,7 +37,7 @@ class Personaje{
   void display(){
     pasos.pause();
       if(a || s || w ||d){
-        
+        movi = true;
         pasos.play();
         
         if(count==0){

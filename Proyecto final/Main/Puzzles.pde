@@ -283,7 +283,7 @@ class Puzzle{
          
          if(k){ 
          fill(0);
-         text("0",653,530);
+         text("8",653,530);
          }
          else{
          fill(200,0,0);
@@ -291,7 +291,7 @@ class Puzzle{
          
          if(l){ 
          fill(0);
-         text("8",723,530);
+         text("0",723,530);
          }
          else{
          fill(200,0,0);

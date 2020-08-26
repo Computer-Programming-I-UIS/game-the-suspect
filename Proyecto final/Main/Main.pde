@@ -1,10 +1,10 @@
 import ddf.minim.*;
 import processing.sound.*;
 
-boolean a,w,s,d,f,q,tra,playing1,pu1,antf,enter,game,controls,credits = false;
+boolean a,w,s,d,f,q,tra,playing1,pu1,antf,enter,game, antgame,controls,credits,intropuert = false;
 boolean start = true;
 boolean t,y,u,r,o,g,h,j,k,l,z=false;
-float trax,tray,travx,travy,credy1,credy2,tim,introtime,introvol = 0;
+float trax,tray,travx,travy,credy1,credy2,tim,introtime,introvol,credvol,tras1, tras2 = 0;
 int ny,nx,anim = 0;
 Personaje p;
 Puerta[] puerta = new Puerta[1];
@@ -18,6 +18,7 @@ Minim minim;
 AudioPlayer opendoor;
 AudioPlayer closedoor;
 AudioPlayer pasos;
+AudioPlayer cred;
 //AudioPlayer ingame;
 
 SoundFile intro;
@@ -31,14 +32,21 @@ void setup(){
   opendoor = minim.loadFile("Puerta.mp3");
   closedoor = minim.loadFile("Puerta.mp3");
   pasos = minim.loadFile("Pasos.mp3");
+  cred = minim.loadFile("Sad.mp3");
   //ingame = minim.loadFile("Mgame.mp3");
   
   intro = new SoundFile(this, "Mistery.wav");
   mgame = new SoundFile(this, "Mgame.mp3");
   
+  pasos.loop();
+  pasos.pause();
+  
   ny = 0;
-  nx = -1;
+  nx = -2;
   credy1 = 800;
+  credy2 = 100;
+  tras1 = 255;
+  tras2 = 0;
   for(int i = 0; i < pisoY.length; i++){
     pisoY[i] = (i*20) + 40; 
   }
@@ -48,23 +56,33 @@ void setup(){
   pu = new Puzzle(480,100);
   p = new Personaje();
   for(int i = 0; i < pa.length; i++){
-    pa[i] = new Pared(40*i,20,20,100);
+    pa[i] = new Pared(0,0,0,0);
   }
   puerta[0] = new Puerta (1180,270,PI/2); 
   intro.play();
   //mgame.play();
+  
+  //pasos.setVolume(0.5);
 }
 
 void draw(){
   
   background(40);
+  
   if(start){
+    //pasos.pause();
     inicio();
+    cred.pause();
     //intro.play();
     
   }
   else if(game){
+    if(frameCount%480 == 0){
+      pasos.loop();
+    }
     intro.stop();
+    pasos.setGain(-20);
+    
     piso();
     p.update();
     colision();
@@ -84,6 +102,8 @@ void draw(){
   }
   
   else if(credits){
+    //intro.stop();
+    cred.play();
    creditos(); 
   }
   
