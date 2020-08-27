@@ -104,7 +104,7 @@ void draw(){
     }
     
     p.display();
-    kill(pu.min >= 2);
+    kill(pu.seg >= 20 ); // OOOOOOOOOJOOOOOOOOOOOO
   }
   
   else if(controls){

@@ -287,13 +287,35 @@ void creditos(){
     if(cond){
       fill(255);
      transicion();
+     strokeWeight(1);
      tim += 1;
      if(tim >= 90){
        textSize(150);
        fill(0);
        text("Game Over",200,400);
+       
+       textSize(30);
+       text("Q para ir atras", 20, 40);// si se quiere devolver 
+       
+       if(q){
+       nx = -1;
+       ny = 0;
+       p.x = 100;
+       p.y = (height/2)-(p.ry/2);
+       p.vx = 5;
+       p.vy = 5;
+       pu.min = 0;
+       pu.seg = 0;
+       pu1 = false;
+       playing1 = false;
+       mgame.loop();
+       mgame.pause();
      }
+     }
+     
     }
+    
+    strokeWeight(1);
   }
   
   void inip2(){

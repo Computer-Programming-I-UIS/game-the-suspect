@@ -57,6 +57,7 @@ class Puzzle{
    rect(974,70,150,120,100);
    image(cuadro,1000,80);
    
+   
    p1move(posx+10, posy+10);
    
    if(frameCount%60 == 0){
