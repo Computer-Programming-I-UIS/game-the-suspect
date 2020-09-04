@@ -121,7 +121,7 @@ void piso(){
 
 void inip1(){
  
-  if(p.x > 550 && p.x < 690 && p.y > 350){
+  if(p.x > 500 && p.x < 700 && p.y > 400 && p.y<600){
     
     if(playing1){
       
@@ -320,7 +320,7 @@ void creditos(){
   
   void inip2(){
  
-  if(p.x > 180 && p.x < 250 && p.y < 290 && p.y > 245){
+  if(p.x > 150 && p.x < 270 && p.y < 300 && p.y > 235){
     
     if(playing1){
      textSize(15);

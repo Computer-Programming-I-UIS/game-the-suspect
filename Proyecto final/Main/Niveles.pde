@@ -88,7 +88,7 @@ void nivelme20(){
   puerta[0].display();
   puerta[0].mov(intropuert);
   
-  if(p.x >= 900 && p.x <= 1000 && p.y+p.ry >= 300 && p.y + p.ry <=400){
+  if(p.x >= 850 && p.x <= 1050 && p.y+p.ry >= 250 && p.y + p.ry <=450){
     
    if(f==true && antf == false){
     intropuert = true; 
