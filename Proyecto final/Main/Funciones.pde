@@ -186,7 +186,7 @@ void inicio(){
     textSize(30);
     fill(100);
     if(mousePressed && mouseX <= 660 && mouseX >= 460 && mouseY <= 340 && mouseY >= 300){
-      game = true; 
+      dif = true; 
      start = false;
     }
     rect(460,300,200,40);
@@ -375,21 +375,21 @@ void dificultad(){
  text("DIFICIL",540,540);
  
  if(mousePressed && mouseX >=530 &&mouseX <=730 && mouseY >= 250 && mouseY <= 310){
-  facil = true; 
   lmin = 20;
-  print("facil");
+  game = true;
+  dif = false;
  }
  
  if(mousePressed && mouseX >=530 &&mouseX <=730 && mouseY >= 370 && mouseY <= 430){
-  medio = true; 
   lmin = 15;
-  print("medio");
+  game = true;
+  dif = false;
  }
  
  if(mousePressed && mouseX >=530 &&mouseX <=730 && mouseY >= 490 && mouseY <= 550){
-  dificil = true; 
   lmin = 10;
-  print("dificil");
+  game = true;
+  dif = false;
  }
  
  

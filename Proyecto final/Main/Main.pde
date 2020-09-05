@@ -2,7 +2,7 @@ import ddf.minim.*;
 import processing.sound.*;
 
 boolean a,w,s,d,f,q,tra,playing1,pu1,antf,enter,game, antgame,controls,credits,intropuert = false;
-boolean facil,medio,dificil = false;
+boolean dif = false;
 boolean start = true;
 boolean t,y,u,r,o,g,h,j,k,l,z=false;
 float trax,tray,travx,travy,credy1,credy2,tim,introtime,introvol,credvol = 0;
@@ -87,6 +87,10 @@ void draw(){
     //intro.play();
     
   }
+  else if(dif){
+    dificultad();
+  }
+  
   else if(game){
     if(frameCount%480 == 0){
       pasos.loop();
@@ -117,7 +121,4 @@ void draw(){
     cred.play();
    creditos(); 
   }
-  
-  
-  dificultad();
 }
