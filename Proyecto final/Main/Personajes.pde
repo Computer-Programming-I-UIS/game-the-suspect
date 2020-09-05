@@ -14,8 +14,8 @@ class Personaje{
     ry = 100;
     x = (width/2)-(rx/2);
     y = (height/2)-(ry/2);
-    vx = 5;
-    vy = 5;
+    vx = 10;
+    vy = 10;
     
     dx = 1;
     dy = 1;
@@ -39,16 +39,17 @@ class Personaje{
       if(a || s || w ||d){
         movi = true;
         pasos.play();
+        fill(255);
         
         if(count==0){
         image(personaje[animacion],x,y);
-        if(frameCount%10 == 0){
+        if(frameCount%5 == 0){
          animacion = (animacion+1)%personaje.length;}
         }
          
         if(count==1){ 
           image(personaje2[animacion],x,y);
-          if(frameCount%10 == 0){
+          if(frameCount%5 == 0){
            animacion = (animacion+1)%personaje2.length;}
         }
       }
@@ -60,7 +61,9 @@ class Personaje{
        if(count == 1){
          image(personaje2[animacion],x,y);
        }
-      }    
+      }
+      
+      //rect(x,y,rx,ry);
   }   
        
        

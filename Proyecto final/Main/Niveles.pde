@@ -325,7 +325,7 @@ void nivel10(){
     fill(255);
     textSize(14);
     text("frase:",110,70);
-    pu.p3();
+    pu.p3(p.x,p.y,p.rx,p.ry);
   }
 }
 

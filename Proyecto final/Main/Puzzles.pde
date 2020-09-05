@@ -1,9 +1,11 @@
 class Puzzle{
   float lp1,diamp1,xp1,yp1 = 0;
   float cuadp1, xlim, vlim, posx, posy,time = 0;
+  float p3rx, p3ry, p3x, p3y = 0;
   int i, c,seg, min = 0;
   boolean com,com2 = false;
   PVector[] fichas = new PVector[8];  
+  PVector[][] p3cuadros = new PVector[7][4];
   PVector spdx = new PVector(5,0);
   PImage[] monalisa = new PImage[8]; 
   PImage cuadro;
@@ -21,6 +23,12 @@ class Puzzle{
    vlim = 0.8;
    posx = posxx;
    posy = posyy;
+   
+   p3x = 190;
+   p3y = 80;
+   p3rx = 100;
+   p3ry = 100;
+   
    cuadro=loadImage("monalisa.png"); 
    cuadro.resize(100,100);
    operacion=loadImage("operacion.png");
@@ -45,6 +53,14 @@ class Puzzle{
         i++;
       } 
    }
+   
+   
+   for(int i = 0; i < p3cuadros.length; i++){
+     for(int j = 0; j < p3cuadros[i].length; j++){
+       p3cuadros[i][j] = new PVector(p3x + i*(20+p3rx), p3y + j*(20+p3ry) + 10);
+     }
+   }
+   
  }
  
  
@@ -394,12 +410,22 @@ class Puzzle{
 }
   
     
-  void p3(){
+  void p3(float px, float py, float prx, float pry){
     fill(200);  
     textSize(14);
     text("1frase",110,100);
     text("2frase",110,120);
     
+    for(int i = 0; i < p3cuadros.length; i++){
+    
+     for(int j = 0; j < p3cuadros[i].length; j++){
+       fill(255);
+       if(px+20 >= p3cuadros[i][j].x && px+prx-20 <= p3cuadros[i][j].x+p3rx && py+60 >= p3cuadros[i][j].y && py+pry <= p3cuadros[i][j].y+p3ry){
+         fill(255,0,0);
+       }
+       rect(p3cuadros[i][j].x,p3cuadros[i][j].y,p3rx,p3ry);
+       
+     }
+    }
   }
-   
 }

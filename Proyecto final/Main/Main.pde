@@ -27,8 +27,11 @@ AudioPlayer cred;
 SoundFile intro;
 SoundFile mgame;
 
+
+
 void setup(){
   size(1240,720);
+  frameRate(30);
   
   fondo=loadImage("fondo.png");
   edad = loadImage("+10 juegos.png");
@@ -52,7 +55,7 @@ void setup(){
   opendoor.pause();
   
   ny = 0;
-  nx = -2;
+  nx = 1;
   credy1 = 800;
   credy2 = 100;
   tras1 = 255;
@@ -75,6 +78,8 @@ void setup(){
   
   //pasos.setVolume(0.5);
 }
+
+
 
 void draw(){
   
@@ -121,4 +126,6 @@ void draw(){
     cred.play();
    creditos(); 
   }
+  
+  
 }
