@@ -310,6 +310,12 @@ void creditos(){
        playing1 = false;
        mgame.loop();
        mgame.pause();
+       travx = 8;
+       travy = map(travx,0,width,0,height);
+       trax = 0;
+       tray = 0;
+       tim = 0;
+       
      }
      }
      
@@ -352,4 +358,39 @@ void creditos(){
    }
    antf = f;
   }
+}
+
+void dificultad(){
+  textSize(60);
+  fill(0);
+ text("SELECCIONA LA DIFICULTAD", 250, 100);
+ textSize(50);
+ fill(255);
+ rect(530,250,200,60);//Facil
+ rect(530,370,200,60);//Medio
+ rect(530,490,200,60);//Dificil
+ fill(0);
+ text("FACIL",555, 300);
+ text("MEDIO",550,420);
+ text("DIFICIL",540,540);
+ 
+ if(mousePressed && mouseX >=530 &&mouseX <=730 && mouseY >= 250 && mouseY <= 310){
+  facil = true; 
+  lmin = 20;
+  print("facil");
+ }
+ 
+ if(mousePressed && mouseX >=530 &&mouseX <=730 && mouseY >= 370 && mouseY <= 430){
+  medio = true; 
+  lmin = 15;
+  print("medio");
+ }
+ 
+ if(mousePressed && mouseX >=530 &&mouseX <=730 && mouseY >= 490 && mouseY <= 550){
+  dificil = true; 
+  lmin = 10;
+  print("dificil");
+ }
+ 
+ 
 }
