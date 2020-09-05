@@ -3,9 +3,10 @@ class Puzzle{
   float cuadp1, xlim, vlim, posx, posy,time = 0;
   float p3rx, p3ry, p3x, p3y = 0;
   int i, c,seg, min = 0;
-  boolean com,com2 = false;
+  boolean com,com2,kill3 = false;
   PVector[] fichas = new PVector[8];  
   PVector[][] p3cuadros = new PVector[7][4];
+  boolean[][]p3pos = new boolean[7][4];
   PVector spdx = new PVector(5,0);
   PImage[] monalisa = new PImage[8]; 
   PImage cuadro;
@@ -20,12 +21,12 @@ class Puzzle{
    yp1 = 250;
    cuadp1 = 80;
    i = 0;
-   vlim = 0.8;
+   vlim = 1.6;
    posx = posxx;
    posy = posyy;
    
-   p3x = 190;
-   p3y = 80;
+   p3x = 200;
+   p3y = 100;
    p3rx = 100;
    p3ry = 100;
    
@@ -58,6 +59,7 @@ class Puzzle{
    for(int i = 0; i < p3cuadros.length; i++){
      for(int j = 0; j < p3cuadros[i].length; j++){
        p3cuadros[i][j] = new PVector(p3x + i*(20+p3rx), p3y + j*(20+p3ry) + 10);
+       p3pos[i][j] = false;
      }
    }
    
@@ -420,12 +422,31 @@ class Puzzle{
     
      for(int j = 0; j < p3cuadros[i].length; j++){
        fill(255);
-       if(px+20 >= p3cuadros[i][j].x && px+prx-20 <= p3cuadros[i][j].x+p3rx && py+60 >= p3cuadros[i][j].y && py+pry <= p3cuadros[i][j].y+p3ry){
+       p3pos[i][j] = false;
+       if(px+20 >= p3cuadros[i][j].x && px+prx-20 <= p3cuadros[i][j].x+p3rx && py+80 >= p3cuadros[i][j].y && py+pry <= p3cuadros[i][j].y+p3ry){
          fill(255,0,0);
+         p3pos[i][j] = true;
        }
        rect(p3cuadros[i][j].x,p3cuadros[i][j].y,p3rx,p3ry);
-       
      }
     }
+    kill3 = false;
+    if(p3pos[0][0] == true ||
+    p3pos[1][0] == true ||
+    p3pos[2][0] == true ||
+    p3pos[6][0] == true ||
+    p3pos[2][1] == true ||
+    p3pos[3][1] == true ||
+    p3pos[4][1] == true ||
+    p3pos[0][2] == true ||
+    p3pos[2][2] == true ||
+    p3pos[3][2] == true ||
+    p3pos[0][3] == true ||
+    p3pos[5][3] == true ||
+    p3pos[6][3] == true ){
+      
+      kill3 = true;
+    }
   }
+  
 }

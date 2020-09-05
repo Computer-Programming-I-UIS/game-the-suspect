@@ -320,13 +320,15 @@ void nivel10(){
      default:
      pa[i] = new Pared(0,0,0,0);
     }
-     fill(0);
+     
+  }
+  fill(0);
     rect(100,50,140,35);
     fill(255);
     textSize(14);
     text("frase:",110,70);
     pu.p3(p.x,p.y,p.rx,p.ry);
-  }
+    
 }
 
 

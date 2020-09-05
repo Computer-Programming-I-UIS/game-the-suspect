@@ -302,15 +302,15 @@ void creditos(){
        ny = 0;
        p.x = 100;
        p.y = (height/2)-(p.ry/2);
-       p.vx = 5;
-       p.vy = 5;
+       p.vx = 10;
+       p.vy = 10;
        pu.min = 0;
        pu.seg = 0;
        pu1 = false;
        playing1 = false;
        mgame.loop();
        mgame.pause();
-       travx = 8;
+       travx = 16;
        travy = map(travx,0,width,0,height);
        trax = 0;
        tray = 0;

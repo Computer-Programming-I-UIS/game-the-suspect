@@ -114,7 +114,10 @@ void draw(){
     }
     
     p.display();
-    kill(pu.min >= lmin ); 
+    kill(pu.min >= lmin );
+    if(nx == 1 && ny == 0){
+      kill(pu.kill3);
+    }
   }
   
   else if(controls){
