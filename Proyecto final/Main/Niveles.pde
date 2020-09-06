@@ -85,8 +85,8 @@ void nivelme20(){
   pa[7] = new Pared(puerta[0].x-puerta[0].ly,puerta[0].y-puerta[0].esp/2,puerta[0].ly,puerta[0].lx);
   pa[8] = new Pared(puerta[0].x-puerta[0].ly,puerta[0].y+puerta[0].lx+puerta[0].esp/2,puerta[0].ly,puerta[0].lx);
   fill(50);
-  puerta[0].display();
-  puerta[0].mov(intropuert);
+  /*puerta[0].display();
+  puerta[0].mov(intropuert);*/
   
   if(p.x >= 850 && p.x <= 1050 && p.y+p.ry >= 250 && p.y + p.ry <=450){
     
@@ -133,11 +133,11 @@ void nivel00(){
     
    }
  }
-  pa[7] = new Pared(puerta[0].x-puerta[0].ly,puerta[0].y-puerta[0].esp/2,puerta[0].ly,puerta[0].lx);
-  pa[8] = new Pared(puerta[0].x-puerta[0].ly,puerta[0].y+puerta[0].lx+puerta[0].esp/2,puerta[0].ly,puerta[0].lx);
+  /*pa[7] = new Pared(puerta[0].x-puerta[0].ly,puerta[0].y-puerta[0].esp/2,puerta[0].ly,puerta[0].lx);
+  pa[8] = new Pared(puerta[0].x-puerta[0].ly,puerta[0].y+puerta[0].lx+puerta[0].esp/2,puerta[0].ly,puerta[0].lx);*/
   fill(50);
-  puerta[0].display();
-  puerta[0].mov(pu.com2);
+  /*puerta[0].display();
+  puerta[0].mov(pu.com2);*///OOOOOOOOOOOOOOOOOJOOOOOOOOOOOOOOOOOOOOO
   //pu.p2();
   fill(200,0,0);
   rect(200,280,80,80);// Botón
@@ -188,12 +188,12 @@ void nivelme10(){
     textSize(14);
     text("frase:",110,70);
   noFill();
-  pa[5] = new Pared(puerta[0].x-puerta[0].ly,puerta[0].y-puerta[0].esp/2,puerta[0].ly,puerta[0].lx);
-  pa[6] = new Pared(puerta[0].x-puerta[0].ly,puerta[0].y+puerta[0].lx+puerta[0].esp/2,puerta[0].ly,puerta[0].lx);
+  /*pa[5] = new Pared(puerta[0].x-puerta[0].ly,puerta[0].y-puerta[0].esp/2,puerta[0].ly,puerta[0].lx);
+  pa[6] = new Pared(puerta[0].x-puerta[0].ly,puerta[0].y+puerta[0].lx+puerta[0].esp/2,puerta[0].ly,puerta[0].lx);*/
   fill(50);
-  puerta[0].display();
+  /*puerta[0].display();
   puerta[0].mov(pu.com);
- // puerta[0].mov(key == ' ');
+ // puerta[0].mov(key == ' ');*/ //OOOOOOOOOOOOOOOOOJOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
   
   fill(200,0,0);
   rect(550,450,140,100);// Botón
@@ -327,7 +327,9 @@ void nivel10(){
     fill(255);
     textSize(14);
     text("frase:",110,70);
+    inip3();
     pu.p3(p.x,p.y,p.rx,p.ry);
+    
     
 }
 

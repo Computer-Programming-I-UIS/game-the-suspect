@@ -2,11 +2,12 @@ class Puzzle{
   float lp1,diamp1,xp1,yp1 = 0;
   float cuadp1, xlim, vlim, posx, posy,time = 0;
   float p3rx, p3ry, p3x, p3y = 0;
-  int i, c,seg, min = 0;
+  int i, c,seg, min, p3time = 0;
   boolean com,com2,kill3 = false;
   PVector[] fichas = new PVector[8];  
   PVector[][] p3cuadros = new PVector[7][4];
   boolean[][]p3pos = new boolean[7][4];
+  float[][]p3col = new float[7][4];
   PVector spdx = new PVector(5,0);
   PImage[] monalisa = new PImage[8]; 
   PImage cuadro;
@@ -58,8 +59,9 @@ class Puzzle{
    
    for(int i = 0; i < p3cuadros.length; i++){
      for(int j = 0; j < p3cuadros[i].length; j++){
-       p3cuadros[i][j] = new PVector(p3x + i*(20+p3rx), p3y + j*(20+p3ry) + 10);
+       p3cuadros[i][j] = new PVector(p3x + i*(25+p3rx), p3y + j*(30+p3ry) + 10);
        p3pos[i][j] = false;
+       p3col[i][j] = 0;
      }
    }
    
@@ -418,19 +420,25 @@ class Puzzle{
     text("1frase",110,100);
     text("2frase",110,120);
     
+    
     for(int i = 0; i < p3cuadros.length; i++){
     
      for(int j = 0; j < p3cuadros[i].length; j++){
-       fill(255);
+       if(p3col[i][j] == 0){
+        fill(255); 
+       }
+       else if(p3col[i][j] == 1){
+        fill(0,0,255); 
+       }
        p3pos[i][j] = false;
        if(px+20 >= p3cuadros[i][j].x && px+prx-20 <= p3cuadros[i][j].x+p3rx && py+80 >= p3cuadros[i][j].y && py+pry <= p3cuadros[i][j].y+p3ry){
-         fill(255,0,0);
+         
          p3pos[i][j] = true;
        }
        rect(p3cuadros[i][j].x,p3cuadros[i][j].y,p3rx,p3ry);
      }
     }
-    kill3 = false;
+    
     if(p3pos[0][0] == true ||
     p3pos[1][0] == true ||
     p3pos[2][0] == true ||
@@ -446,6 +454,83 @@ class Puzzle{
     p3pos[6][3] == true ){
       
       kill3 = true;
+    }
+  }
+  
+  void p3camino(){
+    
+    if(frameCount%10 == 0){
+     p3time += 1; 
+    }
+    
+    for(int i = 0; i < p3col.length; i++){
+     for(int j = 0; j < p3col[i].length; j++){
+      p3col[i][j] = 0; 
+     }
+    }
+    switch (p3time){
+     
+      case 1:
+      p3col[0][1] = 1; 
+      break;
+      
+      case 2:
+      p3col[1][1] = 1;
+      break;
+      
+      case 3:
+      p3col[1][2] = 1;
+      break;
+      
+      case 4:
+      p3col[1][3] = 1;
+      break;
+      
+      case 5:
+      p3col[2][3] = 1;
+      break;
+      
+      case 6:
+      p3col[3][3] = 1;
+      break;
+      
+      case 7:
+      p3col[4][3] = 1;
+      break;
+      
+      case 8:
+      p3col[4][2] = 1;
+      break;
+      
+      case 9:
+      p3col[5][2] = 1;
+      break;
+      
+      case 10:
+      p3col[6][2] = 1;
+      break;
+      
+      case 11:
+      p3col[6][1] = 1;
+      break;
+      
+      case 12:
+      p3col[5][1] = 1;
+      break;
+      
+      case 13:
+      p3col[5][0] = 1;
+      break;
+      
+      case 14:
+      p3col[4][0] = 1;
+      break;
+      
+      case 15:
+      p3col[3][0] = 1;
+      break;
+      
+      default:
     }
   }
   

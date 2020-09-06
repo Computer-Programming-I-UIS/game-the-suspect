@@ -104,6 +104,7 @@ void transicion(){
  rect(width - trax,0,trax,height);
  rect(0,0,width,tray);
  rect(0,height - tray, width,tray);
+ stroke(0);
 }
 
 void piso(){
@@ -116,52 +117,6 @@ void piso(){
      fill(161,130,98,180); 
     }
     rect(40,pisoY[i],1140,20); 
-  }
-}
-
-void inip1(){
- 
-  if(p.x > 500 && p.x < 700 && p.y > 400 && p.y<600){
-    
-    if(playing1){
-      
-      if(tras3 >= 0){
-       tras3 -= 0.5; 
-      }
-     fill(255,tras3);
-     textSize(30);
-     text("Click sobre la ficha que quieres",80,200);
-     text("mover, y muevela con las teclas", 80, 250);
-     text("de movimiento o las flechas", 80, 300);
-     textSize(15);
-     //ingame.play();
-     fill(200,0,0);
-     text("F para dejar de jugar",520,595);
-     if(f== true && antf == false){
-      playing1 = false;
-      mgame.pause();
-      //mgame.play();
-     }
-     p.vx = 0;
-     p.vy = 0;
-   }
-   else{
-     textSize(15);
-     fill(200,0,0);
-     text("F para jugar",520,595);
-     if(f== true && antf == false){
-       playing1 = true;
-       pu1 = true;
-       mgame.play();
-     }
-     p.vx = 5;
-     p.vy = 5;
-   }
-   antf = f;
-  }
-  
-  if(pu.com){
-   mgame.pause(); 
   }
 }
 
@@ -304,12 +259,16 @@ void creditos(){
        p.y = (height/2)-(p.ry/2);
        p.vx = 10;
        p.vy = 10;
+       
        pu.min = 0;
        pu.seg = 0;
+       pu.kill3 = false;
+       
        pu1 = false;
        playing1 = false;
        mgame.loop();
        mgame.pause();
+       
        travx = 16;
        travy = map(travx,0,width,0,height);
        trax = 0;
@@ -353,8 +312,8 @@ void creditos(){
        pu1 = true;
        mgame.play();
      }
-     p.vx = 5;
-     p.vy = 5;
+     p.vx = 10;
+     p.vy = 10;
    }
    antf = f;
   }
@@ -393,4 +352,73 @@ void dificultad(){
  }
  
  
+}
+
+void inip1(){
+ 
+  if(p.x > 500 && p.x < 700 && p.y > 400 && p.y<600){
+    
+    if(playing1){
+      
+      if(tras3 >= 0){
+       tras3 -= 0.5; 
+      }
+     fill(255,tras3);
+     textSize(30);
+     text("Click sobre la ficha que quieres",80,200);
+     text("mover, y muevela con las teclas", 80, 250);
+     text("de movimiento o las flechas", 80, 300);
+     textSize(15);
+     //ingame.play();
+     fill(200,0,0);
+     text("F para dejar de jugar",520,595);
+     if(f== true && antf == false){
+      playing1 = false;
+      mgame.pause();
+      //mgame.play();
+     }
+     p.vx = 0;
+     p.vy = 0;
+   }
+   else{
+     textSize(15);
+     fill(200,0,0);
+     text("F para jugar",520,595);
+     if(f== true && antf == false){
+       playing1 = true;
+       pu1 = true;
+       mgame.play();
+     }
+     p.vx = 5;
+     p.vy = 5;
+   }
+   antf = f;
+  }
+  
+  if(pu.com){
+   mgame.pause(); 
+  }
+}
+
+
+
+void inip3(){
+ 
+  fill(255,0,0);
+  rect(60,300,100,100);
+  
+  if(p.x+p.rx-20 <= 160 && p.x+20 >= 60 && p.y+60 >= 300 && p.y+p.ry <= 400){
+    fill(255);
+    textSize(20);
+    text("PRESIONA F", 60,270);
+    
+    if(f){
+      playing3 = true;
+    }
+    
+    if(playing3){
+     pu.p3camino(); 
+    }
+  }
+  
 }

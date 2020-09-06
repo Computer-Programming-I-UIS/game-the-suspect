@@ -2,7 +2,7 @@ import ddf.minim.*;
 import processing.sound.*;
 
 boolean a,w,s,d,f,q,tra,playing1,pu1,antf,enter,game, antgame,controls,credits,intropuert = false;
-boolean dif = false;
+boolean dif, playing3 = false;
 boolean start = true;
 boolean t,y,u,r,o,g,h,j,k,l,z=false;
 float trax,tray,travx,travy,credy1,credy2,tim,introtime,introvol,credvol = 0;
@@ -55,7 +55,7 @@ void setup(){
   opendoor.pause();
   
   ny = 0;
-  nx = 1;
+  nx = -1;
   credy1 = 800;
   credy2 = 100;
   tras1 = 255;
