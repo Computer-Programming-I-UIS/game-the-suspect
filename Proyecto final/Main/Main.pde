@@ -4,7 +4,7 @@ import processing.sound.*;
 boolean a,w,s,d,f,q,tra,playing1,pu1,antf,enter,game, antgame,controls,credits,intropuert = false;
 boolean dif, playing3 = false;
 boolean start = true;
-boolean t,y,u,r,o,g,h,j,k,l,z=false;
+boolean t,y,u,r,o,g,h,j,k,l,z,b,n,m=false;
 float trax,tray,travx,travy,credy1,credy2,tim,introtime,introvol,credvol = 0;
 float tras1, tras2, tras3, lmin = 0;
 int ny,nx,anim = 0;

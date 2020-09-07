@@ -19,6 +19,9 @@ void keyPressed(){
  if(key == 'k' || key == 'K') {k = true;t=false;y=false;u=false;r=false;o=false;g=false;h=false;j=false;l=false;}
  if(key == 'l' || key == 'L') {l = true;t=false;y=false;u=false;r=false;o=false;g=false;h=false;j=false;k=false;}
  if(key == 'z' || key == 'Z') {z = true;}
+ if(key == 'b' || key == 'B') {b = true;}
+ if(key == 'n' || key == 'N') {n = true;}
+ if(key == 'm' || key == 'M') {m = true;}
 }
 
 void keyReleased(){
@@ -29,6 +32,9 @@ void keyReleased(){
  if(key == 'f' || key == 'F') {f = false;}
  if(keyCode == ENTER){ enter = false;}
  if(key == 'q' || key == 'Q') {q = false;}
+ if(key == 'b' || key == 'B') {b = false;}
+ if(key == 'n' || key == 'N') {n = false;}
+ if(key == 'm' || key == 'M') {m = false;}
  /*if(key == 't' || key == 'T') {t=false;}
  if(key == 'y' || key == 'Y') {y=false;}
  if(key == 'u' || key == 'U') {u=false;}
@@ -422,3 +428,40 @@ void inip3(){
   }
   
 }
+
+ void inip4(){
+ 
+ 
+      
+  if(p.x > 10 && p.x < 150 && p.y < 650 && p.y > 450){
+    
+    if(playing1){
+     textSize(15);
+     //ingame.play();
+     fill(250);
+     text("F para dejar de jugar",50,620);
+     textSize(12);
+     
+     if(f== true && antf == false){
+      playing1 = false;  
+      mgame.pause();
+      //mgame.play();
+     }
+     p.vx = 0;
+     p.vy = 0;
+   }
+   else{
+     textSize(15);
+     fill(250);
+     text("F para jugar",50,628);
+     if(f== true && antf == false){
+       playing1 = true;
+       pu1 = true;
+       mgame.play();
+     }
+     p.vx = 10;
+     p.vy = 10;
+   }
+   antf = f;
+  }
+}     

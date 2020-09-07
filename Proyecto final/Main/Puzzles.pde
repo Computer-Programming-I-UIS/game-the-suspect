@@ -14,7 +14,21 @@ class Puzzle{
   int mate=0;
   PImage operacion;
   int desorden=0;
-  
+  int circulo=0;
+  int nivel=1;
+  int currentTime =0;
+  int currentTime1=0;
+  int currentTime2=0;
+  int currentTime3=0;
+  int currentTime4=0;
+  int currentTime5=0;
+  int orden=0;
+  int orden1=0;
+  int orden2=0;
+  int orden3=0;
+  int orden4=0;
+  int orden5=0;
+  int orden6=0;
  Puzzle(float posxx, float posyy){
    lp1 = 30;
    diamp1 = 80;
@@ -533,5 +547,233 @@ class Puzzle{
       default:
     }
   }
+ 
+  void p4(){
+    
+   
+   if(circulo==1){currentTime+=1;}
+   if(circulo==2){currentTime1+=1;}
+   if(circulo==3){currentTime2+=1;}
+   if(circulo==4){currentTime3+=1;}
+   if(circulo==5){currentTime4+=1;}
+   if(circulo==6){currentTime5+=1;}
+   if (playing1){
+      
+    
+    text(currentTime,700,50);
+    
+    fill(250,0,0);
+    rect(270,180,10,350);
+    rect(270,180,350,10);
+    rect(270,530,350,10);
+    rect(620,180,10,360);
+    
+    rect(670,180,10,350);
+    rect(670,180,350,10);
+    rect(670,530,350,10);
+    rect(1020,180,10,360);
+    
+    fill(250);
+    
+    ellipse(335,250,90,90);
+    ellipse(450,250,90,90);
+    ellipse(565,250,90,90);
+    ellipse(335,360,90,90);
+    ellipse(450,360,90,90);
+    ellipse(565,360,90,90);
+    ellipse(335,470,90,90);
+    ellipse(450,470,90,90);
+    ellipse(565,470,90,90);
+   /* fill(0);
+    text("t",330,250);
+    text("y",445,250);
+    text("u",560,250);
+    text("g",330,360);
+    text("h",445,360);
+    text("j",560,360);
+    text("b",330,470);
+    text("n",445,470);
+    text("m",560,470);*/
+    
+     
+       if(mousePressed && mouseX<380 && mouseX>290 && mouseY<295 && mouseY>205){fill(0,200,0);ellipse(335,250,90,90);orden=1;}
+      
+       if(mousePressed && mouseX<495 && mouseX>405 && mouseY<405 && mouseY>315){fill(0,200,0);ellipse(450,360,90,90);orden1=1;}
+       
+       if(mousePressed && mouseX<495 && mouseX>405 && mouseY<295 && mouseY>205){fill(0,200,0);ellipse(450,250,90,90);orden2=1;}
+       
+       if(mousePressed && mouseX<610 && mouseX>520 && mouseY<515 && mouseY>425){fill(0,200,0);ellipse(565,470,90,90);orden3=1;}
+       
+       if(mousePressed && mouseX<380 && mouseX>290 && mouseY<515 && mouseY>425){fill(0,200,0);ellipse(335,470,90,90);orden4=1;}
+       
+       if(mousePressed && mouseX<610 && mouseX>520 && mouseY<295 && mouseY>205){fill(0,200,0);ellipse(565,250,90,90);orden5=1;}
+       
+       if(mousePressed && mouseX<380 && mouseX>290 && mouseY<405 && mouseY>315){fill(0,200,0);ellipse(335,360,90,90);orden6=1;}
+       
+       if(mousePressed && mouseX<610 && mouseX>520 && mouseY<405 && mouseY>315){fill(0,200,0);ellipse(565,360,90,90);orden6=1;}
+       
+       if(orden==1 && orden1==1){nivel=2;}
+       
+       if(orden==1 && orden1==1 && orden2==1){nivel=3;}
+       
+       if(orden==1 && orden1==1 && orden2==1 && orden3==1){nivel=4;}
+       
+       if(orden==1 && orden1==1 && orden2==1 && orden3==1 && orden4==1){nivel=5;}
+       
+       if(orden==1 && orden1==1 && orden2==1 && orden3==1 && orden4==1 && orden5==1){nivel=6;}
+      
+      
+      /*if(keyPressed==true){
+      if(key=='t'){
+      fill(0,200,0);
+      ellipse(335,250,90,90);
+      if(key=='h'){ellipse(450,360,90,90);nivel=2;}}}
+      
+      if(t){
+      fill(0,200,0);
+      ellipse(335,250,90,90);
+      if(h){ellipse(450,360,90,90);}
+      if(m){ellipse(450,250,90,90);nivel=3;}}*/
+        
+       
+      
+       switch(nivel){
+         
+         case 1:
+         circulo=1;
+        if(currentTime>400 && currentTime<500 ){
+           fill(0,200,0);
+          ellipse(735,250,90,90); }
+              
+        if(currentTime>600 && currentTime < 700){
+           fill(0,200,0);
+            ellipse(850,360,90,90); }
+        
+        break;
+        
+         case 2:
+         circulo=2;
+         if(currentTime1>400 && currentTime1<500 ){
+           fill(0,200,0);
+          ellipse(735,250,90,90); }
+        
+        if(currentTime1>600 && currentTime1 < 700){
+           fill(0,200,0);
+            ellipse(850,360,90,90); }
+        
+        if(currentTime1>700 && currentTime1 < 800){
+           fill(0,200,0);
+            ellipse(850,250,90,90); }
+        
+        break;
+        
+         case 3:
+         circulo=3;
+        if(currentTime2>400 && currentTime2<500 ){
+           fill(0,200,0);
+          ellipse(735,250,90,90); }
+        
+        if(currentTime2>600 && currentTime2 < 700){
+           fill(0,200,0);
+            ellipse(850,360,90,90);} 
+        
+        if(currentTime2>700 && currentTime2 < 800){
+           fill(0,200,0);
+            ellipse(850,250,90,90); }
+        
+        if(currentTime2>800 && currentTime2 < 900){
+           fill(0,200,0);
+           ellipse(965,470,90,90); }
+        break;
+        
+        case 4:
+         circulo=4;
+        if(currentTime3>400 && currentTime3<500 ){
+           fill(0,200,0);
+          ellipse(735,250,90,90); }
+        
+        if(currentTime3>600 && currentTime3 < 700){
+           fill(0,200,0);
+            ellipse(850,360,90,90);} 
+        
+        if(currentTime3>700 && currentTime3 < 800){
+           fill(0,200,0);
+            ellipse(850,250,90,90); }
+            
+        if(currentTime3>800 && currentTime3 < 900){
+           fill(0,200,0);
+           ellipse(965,470,90,90); }    
+        
+        if(currentTime3>900 && currentTime3 < 1000){
+           fill(0,200,0);
+           ellipse(735,470,90,90); }
+        break;  
+        
+        case 5:
+         circulo=5;
+        if(currentTime4>400 && currentTime4<500 ){
+           fill(0,200,0);
+          ellipse(735,250,90,90); }
+        
+        if(currentTime4>600 && currentTime4 < 700){
+           fill(0,200,0);
+            ellipse(850,360,90,90);} 
+        
+        if(currentTime4>700 && currentTime4 < 800){
+           fill(0,200,0);
+            ellipse(850,250,90,90); }
+            
+        if(currentTime4>800 && currentTime4 < 900){
+           fill(0,200,0);
+           ellipse(965,470,90,90); }    
+        
+        if(currentTime4>900 && currentTime4 < 1000){
+           fill(0,200,0);
+           ellipse(735,470,90,90); } 
+        
+        if(currentTime4>1000 && currentTime4 < 1100){
+           fill(0,200,0);
+           ellipse(965,250,90,90); } 
+          break;
+          
+        case 6:
+         circulo=6;
+        if(currentTime5>400 && currentTime5<500 ){
+           fill(0,200,0);
+          ellipse(735,250,90,90); }
+        
+        if(currentTime5>600 && currentTime5 < 700){
+           fill(0,200,0);
+            ellipse(850,360,90,90);} 
+        
+        if(currentTime5>700 && currentTime5 < 800){
+           fill(0,200,0);
+            ellipse(850,250,90,90); }
+            
+        if(currentTime5>800 && currentTime5 < 900){
+           fill(0,200,0);
+           ellipse(965,470,90,90); }    
+        
+        if(currentTime5>900 && currentTime5 < 1000){
+           fill(0,200,0);
+           ellipse(735,470,90,90); } 
+        
+        if(currentTime5>1000 && currentTime5 < 1100){
+           fill(0,200,0);
+           ellipse(965,250,90,90); } 
+           
+        if(currentTime5>1100 && currentTime5 < 1200){
+           fill(0,200,0);
+           ellipse(735,360,90,90); }  
+           
+        if(currentTime5>1200 && currentTime5< 1300){
+           fill(0,200,0);
+           ellipse(965,360,90,90); }    
+          break;  
+       } 
+     
+  }
+ }
+  
   
 }

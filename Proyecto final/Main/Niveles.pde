@@ -373,5 +373,13 @@ void nivel11(){
     fill(255);
     textSize(14);
     text("frase:",110,70);
+    
+    text("Sigue la secuencia",550,137);
+    
+    fill(0);
+    rect(60,500,100,100);
+    inip4();
+    if(pu1){
+     pu.p4();}   
   }
 }
