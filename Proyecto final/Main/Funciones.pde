@@ -465,3 +465,41 @@ void inip3(){
    antf = f;
   }
 }     
+
+
+ void inip5(){
+ 
+ 
+      
+  if(p.x > 950 && p.x < 1150 && p.y < 450 && p.y > 250){
+    
+    if(playing1){
+     textSize(15);
+     //ingame.play();
+     fill(250);
+     text("F para dejar de jugar",1000,450);
+     textSize(12);
+     
+     if(f== true && antf == false){
+      playing1 = false;  
+      mgame.pause();
+      //mgame.play();
+     }
+     p.vx = 0;
+     p.vy = 0;
+   }
+   else{
+     textSize(15);
+     fill(250);
+     text("F para jugar",1000,450);
+     if(f== true && antf == false){
+       playing1 = true;
+       pu1 = true;
+       mgame.play();
+     }
+     p.vx = 10;
+     p.vy = 10;
+   }
+   antf = f;
+  }
+}     

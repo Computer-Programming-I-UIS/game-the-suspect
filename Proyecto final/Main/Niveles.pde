@@ -141,6 +141,11 @@ void nivel00(){
   //pu.p2();
   fill(200,0,0);
   rect(200,280,80,80);// Botón
+    fill(0);
+    rect(100,50,140,35);
+    fill(255);
+    textSize(14);
+    text("frase:",110,70);
   inip2();
   
   if(pu1){
@@ -182,7 +187,7 @@ void nivelme10(){
      pa[i] = new Pared(0,0,0,0);
    }
   }
-   fill(0);
+    fill(0);
     rect(100,50,140,35);
     fill(255);
     textSize(14);
@@ -283,6 +288,12 @@ void nivel01(){
     fill(255);
     textSize(14);
     text("frase:",110,70);
+    
+    fill(0);
+    rect(1000,300,100,100);
+    inip5();
+    if(pu1){
+     pu.p5();}
  }
   
 }

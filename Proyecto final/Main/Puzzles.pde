@@ -16,12 +16,12 @@ class Puzzle{
   int desorden=0;
   int circulo=0;
   int nivel=1;
-  int currentTime =0;
-  int currentTime1=0;
-  int currentTime2=0;
-  int currentTime3=0;
-  int currentTime4=0;
-  int currentTime5=0;
+  int currentTime =200;
+  int currentTime1=200;
+  int currentTime2=200;
+  int currentTime3=200;
+  int currentTime4=200;
+  int currentTime5=200;
   int orden=0;
   int orden1=0;
   int orden2=0;
@@ -245,7 +245,9 @@ class Puzzle{
       
        fill(200);  
        textSize(14);
-       text("1frase",110,100);  
+       fill(0);
+       text("nombre",110,120); 
+       text("secreto",110,140);
        
        
        
@@ -429,10 +431,12 @@ class Puzzle{
   
     
   void p3(float px, float py, float prx, float pry){
-    fill(200);  
+    fill(0);  
     textSize(14);
-    text("1frase",110,100);
-    text("2frase",110,120);
+    text("secreto",110,120);
+    text("agujero",110,140);
+    text("vida",110,160);
+    text("nombre",110,180);
     
     
     for(int i = 0; i < p3cuadros.length; i++){
@@ -557,6 +561,16 @@ class Puzzle{
    if(circulo==4){currentTime3+=1;}
    if(circulo==5){currentTime4+=1;}
    if(circulo==6){currentTime5+=1;}
+   fill(0);
+   text("secreto",110,120);
+   text("agujero",110,140);
+   text("vida",110,160);
+   text("nombre",110,180);
+   text("sombra",110,200);
+   text("sandia",110,220);
+   
+   
+   
    if (playing1){
       
     
@@ -595,22 +609,27 @@ class Puzzle{
     text("n",445,470);
     text("m",560,470);*/
     
-     
+     if (circulo>0 && circulo<7){
        if(mousePressed && mouseX<380 && mouseX>290 && mouseY<295 && mouseY>205){fill(0,200,0);ellipse(335,250,90,90);orden=1;}
       
-       if(mousePressed && mouseX<495 && mouseX>405 && mouseY<405 && mouseY>315){fill(0,200,0);ellipse(450,360,90,90);orden1=1;}
+       if(mousePressed && mouseX<495 && mouseX>405 && mouseY<405 && mouseY>315){fill(0,200,0);ellipse(450,360,90,90);orden1=1;}}
        
-       if(mousePressed && mouseX<495 && mouseX>405 && mouseY<295 && mouseY>205){fill(0,200,0);ellipse(450,250,90,90);orden2=1;}
+     if (circulo>1 && circulo<7){ 
+       if(mousePressed && mouseX<495 && mouseX>405 && mouseY<295 && mouseY>205){fill(0,200,0);ellipse(450,250,90,90);orden2=1;}}
        
-       if(mousePressed && mouseX<610 && mouseX>520 && mouseY<515 && mouseY>425){fill(0,200,0);ellipse(565,470,90,90);orden3=1;}
+     if (circulo>2 && circulo<7){ 
+       if(mousePressed && mouseX<610 && mouseX>520 && mouseY<515 && mouseY>425){fill(0,200,0);ellipse(565,470,90,90);orden3=1;}}
+      
+     if (circulo>3 && circulo<7){  
+       if(mousePressed && mouseX<380 && mouseX>290 && mouseY<515 && mouseY>425){fill(0,200,0);ellipse(335,470,90,90);orden4=1;}}
        
-       if(mousePressed && mouseX<380 && mouseX>290 && mouseY<515 && mouseY>425){fill(0,200,0);ellipse(335,470,90,90);orden4=1;}
+     if (circulo>4 && circulo<7){  
+       if(mousePressed && mouseX<610 && mouseX>520 && mouseY<295 && mouseY>205){fill(0,200,0);ellipse(565,250,90,90);orden5=1;}}
        
-       if(mousePressed && mouseX<610 && mouseX>520 && mouseY<295 && mouseY>205){fill(0,200,0);ellipse(565,250,90,90);orden5=1;}
-       
+     if (circulo>5 && circulo<7){  
        if(mousePressed && mouseX<380 && mouseX>290 && mouseY<405 && mouseY>315){fill(0,200,0);ellipse(335,360,90,90);orden6=1;}
        
-       if(mousePressed && mouseX<610 && mouseX>520 && mouseY<405 && mouseY>315){fill(0,200,0);ellipse(565,360,90,90);orden6=1;}
+       if(mousePressed && mouseX<610 && mouseX>520 && mouseY<405 && mouseY>315){fill(0,200,0);ellipse(565,360,90,90);orden6=1;}}
        
        if(orden==1 && orden1==1){nivel=2;}
        
@@ -774,6 +793,99 @@ class Puzzle{
      
   }
  }
+ 
+ 
+ void p5(){
+   fill(0);
+   text("secreto",110,120);
+   text("agujero",110,140);
+   text("vida",110,160);
+   text("nombre",110,180);
+   text("sombra",110,200);
+   text("sandia",110,220);
+   text("huevo",110,240);
+   text("acertijo",110,260);
+   
+   if(playing1){
+   fill(200);  
+   rect(300,200,50,50);
+   rect(360,200,50,50);
+   rect(420,200,50,50);
+   rect(480,200,50,50);
+   rect(540,200,50,50);
+   rect(600,200,50,50);
+   rect(660,200,50,50);
+   rect(720,200,50,50);
+   fill(0);
+   text("1",323,223);
+   text("2",383,223);
+   text("3",443,223);
+   text("4",503,223);
+   text("5",563,223);
+   text("6",623,223);
+   text("7",683,223);
+   text("8",743,223);
+   
+   if(mouseButton==LEFT && mouseX>300 && mouseX<350 && mouseY>200 && mouseY<250 ){
+     mousePressed=true;
+     fill(100);
+     rect(300,300,470,250);
+     fill(0);
+     text("¿Qué es aquello que te pertenece, pero al resto de personas lo usan más que tú?",301,320);}//nombre
+     
+   if(mouseButton==LEFT && mouseX>360 && mouseX<410 && mouseY>200 && mouseY<250 ){
+     mousePressed=true;
+     fill(100);
+     rect(300,300,470,250);
+     fill(0);
+     textSize(11);
+     text("Si me tienes, te apetece compartirme. Si me compartes dejarás de tenerme. ¿Quién soy?",301,320);}  //secreto
+     
+   if(mouseButton==LEFT && mouseX>420 && mouseX<470 && mouseY>200 && mouseY<250 ){
+     mousePressed=true;
+     fill(100);
+     rect(300,300,470,250);
+     fill(0);
+     textSize(11);
+     text("¿Qué cosa es que cuanto más le quitas más grande es?",301,320);}    //agujero
+   
+   if(mouseButton==LEFT && mouseX>480 && mouseX<530 && mouseY>200 && mouseY<250 ){
+     mousePressed=true;
+     fill(100);
+     rect(300,300,470,250);
+     fill(0);
+     text("Es algo que que crece, pero que se encoge al mismo tiempo ¿Qué es?",301,320);} //vida
+     
+    if(mouseButton==LEFT && mouseX>540 && mouseX<590 && mouseY>200 && mouseY<250 ){
+     mousePressed=true;
+     fill(100);
+     rect(300,300,470,250);
+     fill(0);
+     text("Existo en tu mente cuando no me conoces, pero desaparezco cuando sabes.",301,320);  //acertijo 
+     text("¿quien soy?",301,328);}
+     
+    if(mouseButton==LEFT && mouseX>600 && mouseX<650 && mouseY>200 && mouseY<250 ){
+     mousePressed=true;
+     fill(100);
+     rect(300,300,470,250);
+     fill(0);
+     text("¿Que es mas util cuando esta roto?.",301,320);}   //huevo
+     
+    if(mouseButton==LEFT && mouseX>660 && mouseX<710 && mouseY>200 && mouseY<250 ){
+     mousePressed=true;
+     fill(100);
+     rect(300,300,470,250);
+     fill(0);
+     text("Continuas en rojo, pero te paras en verde. ¿Qué soy?",301,320);}//sandia
+    
+     if(mouseButton==LEFT && mouseX>720 && mouseX<770 && mouseY>200 && mouseY<250 ){
+     mousePressed=true;
+     fill(100);
+     rect(300,300,470,250);
+     fill(0);
+     text("Estoy contigo todo el dia pero no toda la noche.¿Que soy?.",301,320);}  //sombra
+   
+ }}
   
   
 }
