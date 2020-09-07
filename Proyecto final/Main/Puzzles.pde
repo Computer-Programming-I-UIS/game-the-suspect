@@ -16,12 +16,12 @@ class Puzzle{
   int desorden=0;
   int circulo=0;
   int nivel=1;
-  int currentTime =200;
-  int currentTime1=200;
-  int currentTime2=200;
-  int currentTime3=200;
-  int currentTime4=200;
-  int currentTime5=200;
+  int currentTime =300;
+  int currentTime1=300;
+  int currentTime2=300;
+  int currentTime3=300;
+  int currentTime4=300;
+  int currentTime5=300;
   int orden=0;
   int orden1=0;
   int orden2=0;
@@ -609,7 +609,7 @@ class Puzzle{
     text("n",445,470);
     text("m",560,470);*/
     
-     if (circulo>0 && circulo<7){
+    if (circulo>0 && circulo<7){
        if(mousePressed && mouseX<380 && mouseX>290 && mouseY<295 && mouseY>205){fill(0,200,0);ellipse(335,250,90,90);orden=1;}
       
        if(mousePressed && mouseX<495 && mouseX>405 && mouseY<405 && mouseY>315){fill(0,200,0);ellipse(450,360,90,90);orden1=1;}}
@@ -630,6 +630,11 @@ class Puzzle{
        if(mousePressed && mouseX<380 && mouseX>290 && mouseY<405 && mouseY>315){fill(0,200,0);ellipse(335,360,90,90);orden6=1;}
        
        if(mousePressed && mouseX<610 && mouseX>520 && mouseY<405 && mouseY>315){fill(0,200,0);ellipse(565,360,90,90);orden6=1;}}
+       
+       
+       
+       
+       
        
        if(orden==1 && orden1==1){nivel=2;}
        
@@ -660,11 +665,11 @@ class Puzzle{
          
          case 1:
          circulo=1;
-        if(currentTime>400 && currentTime<500 ){
+        if(currentTime>400 && currentTime<450 ){
            fill(0,200,0);
           ellipse(735,250,90,90); }
               
-        if(currentTime>600 && currentTime < 700){
+        if(currentTime>500 && currentTime < 550){
            fill(0,200,0);
             ellipse(850,360,90,90); }
         
@@ -672,15 +677,15 @@ class Puzzle{
         
          case 2:
          circulo=2;
-         if(currentTime1>400 && currentTime1<500 ){
+         if(currentTime1>400 && currentTime1<450 ){
            fill(0,200,0);
           ellipse(735,250,90,90); }
         
-        if(currentTime1>600 && currentTime1 < 700){
+        if(currentTime1>500 && currentTime1 < 550){
            fill(0,200,0);
             ellipse(850,360,90,90); }
         
-        if(currentTime1>700 && currentTime1 < 800){
+        if(currentTime1>600 && currentTime1 < 650){
            fill(0,200,0);
             ellipse(850,250,90,90); }
         
@@ -688,104 +693,104 @@ class Puzzle{
         
          case 3:
          circulo=3;
-        if(currentTime2>400 && currentTime2<500 ){
+        if(currentTime2>400 && currentTime2<450 ){
            fill(0,200,0);
           ellipse(735,250,90,90); }
         
-        if(currentTime2>600 && currentTime2 < 700){
+        if(currentTime2>500 && currentTime2 < 550){
            fill(0,200,0);
             ellipse(850,360,90,90);} 
         
-        if(currentTime2>700 && currentTime2 < 800){
+        if(currentTime2>600 && currentTime2 < 650){
            fill(0,200,0);
             ellipse(850,250,90,90); }
         
-        if(currentTime2>800 && currentTime2 < 900){
+        if(currentTime2>700 && currentTime2 < 750){
            fill(0,200,0);
            ellipse(965,470,90,90); }
         break;
         
         case 4:
          circulo=4;
-        if(currentTime3>400 && currentTime3<500 ){
+        if(currentTime3>400 && currentTime3<450 ){
            fill(0,200,0);
           ellipse(735,250,90,90); }
         
-        if(currentTime3>600 && currentTime3 < 700){
+        if(currentTime3>500 && currentTime3 < 550){
            fill(0,200,0);
             ellipse(850,360,90,90);} 
         
-        if(currentTime3>700 && currentTime3 < 800){
+        if(currentTime3>600 && currentTime3 < 650){
            fill(0,200,0);
             ellipse(850,250,90,90); }
             
-        if(currentTime3>800 && currentTime3 < 900){
+        if(currentTime3>700 && currentTime3 < 750){
            fill(0,200,0);
            ellipse(965,470,90,90); }    
         
-        if(currentTime3>900 && currentTime3 < 1000){
+        if(currentTime3>800 && currentTime3 < 850){
            fill(0,200,0);
            ellipse(735,470,90,90); }
         break;  
         
         case 5:
          circulo=5;
-        if(currentTime4>400 && currentTime4<500 ){
+        if(currentTime4>400 && currentTime4<450 ){
            fill(0,200,0);
           ellipse(735,250,90,90); }
         
-        if(currentTime4>600 && currentTime4 < 700){
+        if(currentTime4>500 && currentTime4 < 550){
            fill(0,200,0);
             ellipse(850,360,90,90);} 
         
-        if(currentTime4>700 && currentTime4 < 800){
+        if(currentTime4>600 && currentTime4 < 650){
            fill(0,200,0);
             ellipse(850,250,90,90); }
             
-        if(currentTime4>800 && currentTime4 < 900){
+        if(currentTime4>700 && currentTime4 < 750){
            fill(0,200,0);
            ellipse(965,470,90,90); }    
         
-        if(currentTime4>900 && currentTime4 < 1000){
+        if(currentTime4>800 && currentTime4 < 850){
            fill(0,200,0);
            ellipse(735,470,90,90); } 
         
-        if(currentTime4>1000 && currentTime4 < 1100){
+        if(currentTime4>900 && currentTime4 < 950){
            fill(0,200,0);
            ellipse(965,250,90,90); } 
           break;
           
         case 6:
          circulo=6;
-        if(currentTime5>400 && currentTime5<500 ){
+        if(currentTime4>400 && currentTime4<450 ){
            fill(0,200,0);
           ellipse(735,250,90,90); }
         
-        if(currentTime5>600 && currentTime5 < 700){
+        if(currentTime4>500 && currentTime4 < 550){
            fill(0,200,0);
             ellipse(850,360,90,90);} 
         
-        if(currentTime5>700 && currentTime5 < 800){
+        if(currentTime4>600 && currentTime4 < 650){
            fill(0,200,0);
             ellipse(850,250,90,90); }
             
-        if(currentTime5>800 && currentTime5 < 900){
+        if(currentTime4>700 && currentTime4 < 750){
            fill(0,200,0);
            ellipse(965,470,90,90); }    
         
-        if(currentTime5>900 && currentTime5 < 1000){
+        if(currentTime4>800 && currentTime4 < 850){
            fill(0,200,0);
            ellipse(735,470,90,90); } 
         
-        if(currentTime5>1000 && currentTime5 < 1100){
+        if(currentTime4>900 && currentTime4 < 950){
            fill(0,200,0);
            ellipse(965,250,90,90); } 
            
-        if(currentTime5>1100 && currentTime5 < 1200){
+        if(currentTime5>1000 && currentTime5 < 1050){
            fill(0,200,0);
            ellipse(735,360,90,90); }  
            
-        if(currentTime5>1200 && currentTime5< 1300){
+        if(currentTime5>1100 && currentTime5< 1150){
            fill(0,200,0);
            ellipse(965,360,90,90); }    
           break;  
