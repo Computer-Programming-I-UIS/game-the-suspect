@@ -257,10 +257,12 @@ class Puzzle{
        
        
        for( int i=6; i<11; i++){
+         fill(200);
          rect(i*70,150,55,55);
          }
          
        for( int i=6; i<11; i++){
+         fill(200);
        rect(i*70,500,55,55);
         }
          
