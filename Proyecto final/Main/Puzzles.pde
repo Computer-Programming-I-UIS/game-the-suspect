@@ -24,11 +24,11 @@ class Puzzle{
   int currentTime5=300;
   int orden=0;
   int orden1=0;
-  int orden2=0;
-  int orden3=0;
-  int orden4=0;
-  int orden5=0;
-  int orden6=0;
+  int orden2,orden21,orden22=0;
+  int orden3,orden31,orden32,orden33=0;
+  int orden4,orden41,orden42,orden43,orden44=0;
+  int orden5,orden51,orden52,orden53,orden54,orden55=0;
+  int orden6,orden61,orden62,orden63,orden64,orden65,orden66,orden67=0;
   int reto1,reto2,reto3,reto4,reto5,reto6,reto7,reto8;
   int Treto;
   int prueba1,prueba2,prueba3,prueba4,prueba5,prueba6,prueba7,prueba8;
@@ -620,47 +620,46 @@ class Puzzle{
     text("m",560,470);*/
     
      if (circulo==1){
-       if(mousePressed && mouseX<380 && mouseX>290 && mouseY<295 && mouseY>205){fill(0,200,0);ellipse(335,250,90,90);orden=1;}
-      
+       if(mousePressed && mouseX<380 && mouseX>290 && mouseY<295 && mouseY>205){fill(0,200,0);ellipse(335,250,90,90);orden=1;}     
        if(mousePressed && mouseX<495 && mouseX>405 && mouseY<405 && mouseY>315){fill(0,200,0);ellipse(450,360,90,90);orden1=1;}}
        
        
      if (circulo==2){ 
        
-       if(mousePressed && mouseX<380 && mouseX>290 && mouseY<295 && mouseY>205){fill(0,200,0);ellipse(335,250,90,90);orden=1;}     
-       if(mousePressed && mouseX<495 && mouseX>405 && mouseY<405 && mouseY>315){fill(0,200,0);ellipse(450,360,90,90);orden1=1;}
-       if(mousePressed && mouseX<495 && mouseX>405 && mouseY<295 && mouseY>205){fill(0,200,0);ellipse(450,250,90,90);orden2=1;}}
+       if(mousePressed && mouseX<380 && mouseX>290 && mouseY<295 && mouseY>205){fill(0,200,0);ellipse(335,250,90,90);orden2=1;}     
+       if(mousePressed && mouseX<495 && mouseX>405 && mouseY<405 && mouseY>315){fill(0,200,0);ellipse(450,360,90,90);orden21=1;}
+       if(mousePressed && mouseX<495 && mouseX>405 && mouseY<295 && mouseY>205){fill(0,200,0);ellipse(450,250,90,90);orden22=1;}}
        
      if (circulo==3){ 
-       if(mousePressed && mouseX<380 && mouseX>290 && mouseY<295 && mouseY>205){fill(0,200,0);ellipse(335,250,90,90);orden=1;}     
-       if(mousePressed && mouseX<495 && mouseX>405 && mouseY<405 && mouseY>315){fill(0,200,0);ellipse(450,360,90,90);orden1=1;}
-       if(mousePressed && mouseX<495 && mouseX>405 && mouseY<295 && mouseY>205){fill(0,200,0);ellipse(450,250,90,90);orden2=1;}
-       if(mousePressed && mouseX<610 && mouseX>520 && mouseY<515 && mouseY>425){fill(0,200,0);ellipse(565,470,90,90);orden3=1;}}
+       if(mousePressed && mouseX<380 && mouseX>290 && mouseY<295 && mouseY>205){fill(0,200,0);ellipse(335,250,90,90);orden3=1;}     
+       if(mousePressed && mouseX<495 && mouseX>405 && mouseY<405 && mouseY>315){fill(0,200,0);ellipse(450,360,90,90);orden31=1;}
+       if(mousePressed && mouseX<495 && mouseX>405 && mouseY<295 && mouseY>205){fill(0,200,0);ellipse(450,250,90,90);orden32=1;}
+       if(mousePressed && mouseX<610 && mouseX>520 && mouseY<515 && mouseY>425){fill(0,200,0);ellipse(565,470,90,90);orden33=1;}}
       
      if (circulo==4){  
-       if(mousePressed && mouseX<380 && mouseX>290 && mouseY<295 && mouseY>205){fill(0,200,0);ellipse(335,250,90,90);orden=1;}     
-       if(mousePressed && mouseX<495 && mouseX>405 && mouseY<405 && mouseY>315){fill(0,200,0);ellipse(450,360,90,90);orden1=1;}
-       if(mousePressed && mouseX<495 && mouseX>405 && mouseY<295 && mouseY>205){fill(0,200,0);ellipse(450,250,90,90);orden2=1;}
-       if(mousePressed && mouseX<610 && mouseX>520 && mouseY<515 && mouseY>425){fill(0,200,0);ellipse(565,470,90,90);orden3=1;}
-       if(mousePressed && mouseX<380 && mouseX>290 && mouseY<515 && mouseY>425){fill(0,200,0);ellipse(335,470,90,90);orden4=1;}}
+       if(mousePressed && mouseX<380 && mouseX>290 && mouseY<295 && mouseY>205){fill(0,200,0);ellipse(335,250,90,90);orden4=1;}     
+       if(mousePressed && mouseX<495 && mouseX>405 && mouseY<405 && mouseY>315){fill(0,200,0);ellipse(450,360,90,90);orden41=1;}
+       if(mousePressed && mouseX<495 && mouseX>405 && mouseY<295 && mouseY>205){fill(0,200,0);ellipse(450,250,90,90);orden42=1;}
+       if(mousePressed && mouseX<610 && mouseX>520 && mouseY<515 && mouseY>425){fill(0,200,0);ellipse(565,470,90,90);orden43=1;}
+       if(mousePressed && mouseX<380 && mouseX>290 && mouseY<515 && mouseY>425){fill(0,200,0);ellipse(335,470,90,90);orden44=1;}}
        
      if (circulo==5){  
-       if(mousePressed && mouseX<380 && mouseX>290 && mouseY<295 && mouseY>205){fill(0,200,0);ellipse(335,250,90,90);orden=1;}     
-       if(mousePressed && mouseX<495 && mouseX>405 && mouseY<405 && mouseY>315){fill(0,200,0);ellipse(450,360,90,90);orden1=1;}
-       if(mousePressed && mouseX<495 && mouseX>405 && mouseY<295 && mouseY>205){fill(0,200,0);ellipse(450,250,90,90);orden2=1;}
-       if(mousePressed && mouseX<610 && mouseX>520 && mouseY<515 && mouseY>425){fill(0,200,0);ellipse(565,470,90,90);orden3=1;}
-       if(mousePressed && mouseX<380 && mouseX>290 && mouseY<515 && mouseY>425){fill(0,200,0);ellipse(335,470,90,90);orden4=1;}
-       if(mousePressed && mouseX<610 && mouseX>520 && mouseY<295 && mouseY>205){fill(0,200,0);ellipse(565,250,90,90);orden5=1;}}
+       if(mousePressed && mouseX<380 && mouseX>290 && mouseY<295 && mouseY>205){fill(0,200,0);ellipse(335,250,90,90);orden5=1;}     
+       if(mousePressed && mouseX<495 && mouseX>405 && mouseY<405 && mouseY>315){fill(0,200,0);ellipse(450,360,90,90);orden51=1;}
+       if(mousePressed && mouseX<495 && mouseX>405 && mouseY<295 && mouseY>205){fill(0,200,0);ellipse(450,250,90,90);orden52=1;}
+       if(mousePressed && mouseX<610 && mouseX>520 && mouseY<515 && mouseY>425){fill(0,200,0);ellipse(565,470,90,90);orden53=1;}
+       if(mousePressed && mouseX<380 && mouseX>290 && mouseY<515 && mouseY>425){fill(0,200,0);ellipse(335,470,90,90);orden54=1;}
+       if(mousePressed && mouseX<610 && mouseX>520 && mouseY<295 && mouseY>205){fill(0,200,0);ellipse(565,250,90,90);orden55=1;}}
        
      if (circulo==6){  
-       if(mousePressed && mouseX<380 && mouseX>290 && mouseY<295 && mouseY>205){fill(0,200,0);ellipse(335,250,90,90);orden=1;}     
-       if(mousePressed && mouseX<495 && mouseX>405 && mouseY<405 && mouseY>315){fill(0,200,0);ellipse(450,360,90,90);orden1=1;}
-       if(mousePressed && mouseX<495 && mouseX>405 && mouseY<295 && mouseY>205){fill(0,200,0);ellipse(450,250,90,90);orden2=1;}
-       if(mousePressed && mouseX<610 && mouseX>520 && mouseY<515 && mouseY>425){fill(0,200,0);ellipse(565,470,90,90);orden3=1;}
-       if(mousePressed && mouseX<380 && mouseX>290 && mouseY<515 && mouseY>425){fill(0,200,0);ellipse(335,470,90,90);orden4=1;}
-       if(mousePressed && mouseX<610 && mouseX>520 && mouseY<295 && mouseY>205){fill(0,200,0);ellipse(565,250,90,90);orden5=1;}
-       if(mousePressed && mouseX<380 && mouseX>290 && mouseY<405 && mouseY>315){fill(0,200,0);ellipse(335,360,90,90);orden6=1;}
-       if(mousePressed && mouseX<610 && mouseX>520 && mouseY<405 && mouseY>315){fill(0,200,0);ellipse(565,360,90,90);orden6=1;}}
+       if(mousePressed && mouseX<380 && mouseX>290 && mouseY<295 && mouseY>205){fill(0,200,0);ellipse(335,250,90,90);orden6=1;}     
+       if(mousePressed && mouseX<495 && mouseX>405 && mouseY<405 && mouseY>315){fill(0,200,0);ellipse(450,360,90,90);orden61=1;}
+       if(mousePressed && mouseX<495 && mouseX>405 && mouseY<295 && mouseY>205){fill(0,200,0);ellipse(450,250,90,90);orden62=1;}
+       if(mousePressed && mouseX<610 && mouseX>520 && mouseY<515 && mouseY>425){fill(0,200,0);ellipse(565,470,90,90);orden63=1;}
+       if(mousePressed && mouseX<380 && mouseX>290 && mouseY<515 && mouseY>425){fill(0,200,0);ellipse(335,470,90,90);orden64=1;}
+       if(mousePressed && mouseX<610 && mouseX>520 && mouseY<295 && mouseY>205){fill(0,200,0);ellipse(565,250,90,90);orden65=1;}
+       if(mousePressed && mouseX<380 && mouseX>290 && mouseY<405 && mouseY>315){fill(0,200,0);ellipse(335,360,90,90);orden66=1;}
+       if(mousePressed && mouseX<610 && mouseX>520 && mouseY<405 && mouseY>315){fill(0,200,0);ellipse(565,360,90,90);orden67=1;}}
        
        
        
@@ -669,13 +668,13 @@ class Puzzle{
        
        if(orden==1 && orden1==1){nivel=2;}
        
-       if(orden==1 && orden1==1 && orden2==1){nivel=3;}
+       if(orden2==1 && orden21==1 && orden22==1){nivel=3;}
        
-       if(orden==1 && orden1==1 && orden2==1 && orden3==1){nivel=4;}
+       if(orden3==1 && orden31==1 && orden32==1 && orden33==1){nivel=4;}
        
-       if(orden==1 && orden1==1 && orden2==1 && orden3==1 && orden4==1){nivel=5;}
+       if(orden4==1 && orden41==1 && orden42==1 && orden43==1 && orden44==1){nivel=5;}
        
-       if(orden==1 && orden1==1 && orden2==1 && orden3==1 && orden4==1 && orden5==1){nivel=6;}
+       if(orden5==1 && orden51==1 && orden52==1 && orden53==1 && orden54==1 && orden55==1){nivel=6;}
       
       
       /*if(keyPressed==true){
@@ -690,11 +689,7 @@ class Puzzle{
       if(h){ellipse(450,360,90,90);}
       if(m){ellipse(450,250,90,90);nivel=3;}}*/
       
-      switch(repeat){
-        
-        case 1:
-        currentTime=0;
-        nivel=1;}
+      
        
       
        switch(nivel){
@@ -709,10 +704,15 @@ class Puzzle{
            fill(0,200,0);
             ellipse(850,360,90,90); }
             
-         if((mousePressed && mouseX<495 && mouseX>405 && mouseY<295 && mouseY>205)||(mousePressed && mouseX<610 && mouseX>520 && mouseY<515 && mouseY>425)
-          ||(mousePressed && mouseX<380 && mouseX>290 && mouseY<515 && mouseY>425)||(mousePressed && mouseX<610 && mouseX>520 && mouseY<295 && mouseY>205)
-          ||(mousePressed && mouseX<380 && mouseX>290 && mouseY<405 && mouseY>315)||(mousePressed && mouseX<610 && mouseX>520 && mouseY<405 && mouseY>315))
-          {ny=0;  nx=-1; p.vx=5; p.vy=5; playing1=false;}  
+         if(mousePressed && mouseX<495 && mouseX>405 && mouseY<295 && mouseY>205){ny=0;  nx=-1; p.vx=5; p.vy=5; playing1=false;fill(200,0,0); ellipse(450,250,90,90);} 
+         if(mousePressed && mouseX<610 && mouseX>520 && mouseY<515 && mouseY>425){ny=0;  nx=-1; p.vx=5; p.vy=5; playing1=false;fill(200,0,0); ellipse(565,470,90,90);} 
+         if(mousePressed && mouseX<380 && mouseX>290 && mouseY<515 && mouseY>425){ny=0;  nx=-1; p.vx=5; p.vy=5; playing1=false;fill(200,0,0); ellipse(335,470,90,90);} 
+         if(mousePressed && mouseX<610 && mouseX>520 && mouseY<295 && mouseY>205){ny=0;  nx=-1; p.vx=5; p.vy=5; playing1=false;fill(200,0,0); ellipse(565,250,90,90);} 
+         if(mousePressed && mouseX<380 && mouseX>290 && mouseY<405 && mouseY>315){ny=0;  nx=-1; p.vx=5; p.vy=5; playing1=false;fill(200,0,0); ellipse(335,360,90,90);} 
+         if(mousePressed && mouseX<610 && mouseX>520 && mouseY<405 && mouseY>315){ny=0;  nx=-1; p.vx=5; p.vy=5; playing1=false;fill(200,0,0); ellipse(565,360,90,90);} 
+         if(mousePressed && mouseX<495 && mouseX>405 && mouseY<515 && mouseY>425){ny=0;  nx=-1; p.vx=5; p.vy=5; playing1=false;fill(200,0,0); ellipse(450,470,90,90);}
+       
+           
         
         break;
         
@@ -729,10 +729,17 @@ class Puzzle{
         if(currentTime1>600 && currentTime1 < 650){
            fill(0,200,0);
             ellipse(850,250,90,90); }
-        if((mousePressed && mouseX<610 && mouseX>520 && mouseY<515 && mouseY>425)
+            
+      /*  if((mousePressed && mouseX<610 && mouseX>520 && mouseY<515 && mouseY>425)
           ||(mousePressed && mouseX<380 && mouseX>290 && mouseY<515 && mouseY>425)||(mousePressed && mouseX<610 && mouseX>520 && mouseY<295 && mouseY>205)
           ||(mousePressed && mouseX<380 && mouseX>290 && mouseY<405 && mouseY>315)||(mousePressed && mouseX<610 && mouseX>520 && mouseY<405 && mouseY>315))
-          {ny=0;  nx=-1; p.vx=5; p.vy=5; playing1=false;}  
+          {ny=0;  nx=-1; p.vx=5; p.vy=5; playing1=false;} */
+         if(mousePressed && mouseX<610 && mouseX>520 && mouseY<515 && mouseY>425){ny=0;  nx=-1; p.vx=5; p.vy=5; playing1=false;fill(200,0,0); ellipse(565,470,90,90);} 
+         if(mousePressed && mouseX<380 && mouseX>290 && mouseY<515 && mouseY>425){ny=0;  nx=-1; p.vx=5; p.vy=5; playing1=false;fill(200,0,0); ellipse(335,470,90,90);} 
+         if(mousePressed && mouseX<610 && mouseX>520 && mouseY<295 && mouseY>205){ny=0;  nx=-1; p.vx=5; p.vy=5; playing1=false;fill(200,0,0); ellipse(565,250,90,90);} 
+         if(mousePressed && mouseX<380 && mouseX>290 && mouseY<405 && mouseY>315){ny=0;  nx=-1; p.vx=5; p.vy=5; playing1=false;fill(200,0,0); ellipse(335,360,90,90);} 
+         if(mousePressed && mouseX<610 && mouseX>520 && mouseY<405 && mouseY>315){ny=0;  nx=-1; p.vx=5; p.vy=5; playing1=false;fill(200,0,0); ellipse(565,360,90,90);} 
+         if(mousePressed && mouseX<495 && mouseX>405 && mouseY<515 && mouseY>425){ny=0;  nx=-1; p.vx=5; p.vy=5; playing1=false;fill(200,0,0); ellipse(450,470,90,90);} 
         
         break;
         
@@ -753,6 +760,17 @@ class Puzzle{
         if(currentTime2>700 && currentTime2 < 750){
            fill(0,200,0);
            ellipse(965,470,90,90); }
+           
+         /*if(
+          (mousePressed && mouseX<380 && mouseX>290 && mouseY<515 && mouseY>425)||(mousePressed && mouseX<610 && mouseX>520 && mouseY<295 && mouseY>205)
+          ||(mousePressed && mouseX<380 && mouseX>290 && mouseY<405 && mouseY>315)||(mousePressed && mouseX<610 && mouseX>520 && mouseY<405 && mouseY>315))
+          {ny=0;  nx=-1; p.vx=5; p.vy=5; playing1=false;} */  
+         if(mousePressed && mouseX<380 && mouseX>290 && mouseY<515 && mouseY>425){ny=0;  nx=-1; p.vx=5; p.vy=5; playing1=false;fill(200,0,0); ellipse(335,470,90,90);} 
+         if(mousePressed && mouseX<610 && mouseX>520 && mouseY<295 && mouseY>205){ny=0;  nx=-1; p.vx=5; p.vy=5; playing1=false;fill(200,0,0); ellipse(565,250,90,90);} 
+         if(mousePressed && mouseX<380 && mouseX>290 && mouseY<405 && mouseY>315){ny=0;  nx=-1; p.vx=5; p.vy=5; playing1=false;fill(200,0,0); ellipse(335,360,90,90);} 
+         if(mousePressed && mouseX<610 && mouseX>520 && mouseY<405 && mouseY>315){ny=0;  nx=-1; p.vx=5; p.vy=5; playing1=false;fill(200,0,0); ellipse(565,360,90,90);} 
+         if(mousePressed && mouseX<495 && mouseX>405 && mouseY<515 && mouseY>425){ny=0;  nx=-1; p.vx=5; p.vy=5; playing1=false;fill(200,0,0); ellipse(450,470,90,90);}
+         
         break;
         
         case 4:
@@ -777,10 +795,15 @@ class Puzzle{
            fill(0,200,0);
            ellipse(735,470,90,90); }
            
-        if(
-          (mousePressed && mouseX<380 && mouseX>290 && mouseY<515 && mouseY>425)||(mousePressed && mouseX<610 && mouseX>520 && mouseY<295 && mouseY>205)
+        /*if(
+          (mousePressed && mouseX<610 && mouseX>520 && mouseY<295 && mouseY>205)
           ||(mousePressed && mouseX<380 && mouseX>290 && mouseY<405 && mouseY>315)||(mousePressed && mouseX<610 && mouseX>520 && mouseY<405 && mouseY>315))
-          {ny=0;  nx=-1; p.vx=5; p.vy=5; playing1=false;}     
+          {ny=0;  nx=-1; p.vx=5; p.vy=5; playing1=false;}*/
+          
+         if(mousePressed && mouseX<610 && mouseX>520 && mouseY<295 && mouseY>205){ny=0;  nx=-1; p.vx=5; p.vy=5; playing1=false;fill(200,0,0); ellipse(565,250,90,90);} 
+         if(mousePressed && mouseX<380 && mouseX>290 && mouseY<405 && mouseY>315){ny=0;  nx=-1; p.vx=5; p.vy=5; playing1=false;fill(200,0,0); ellipse(335,360,90,90);} 
+         if(mousePressed && mouseX<610 && mouseX>520 && mouseY<405 && mouseY>315){ny=0;  nx=-1; p.vx=5; p.vy=5; playing1=false;fill(200,0,0); ellipse(565,360,90,90);} 
+         if(mousePressed && mouseX<495 && mouseX>405 && mouseY<515 && mouseY>425){ny=0;  nx=-1; p.vx=5; p.vy=5; playing1=false;fill(200,0,0); ellipse(450,470,90,90);}
         break;  
         
         case 5:
@@ -809,10 +832,13 @@ class Puzzle{
            fill(0,200,0);
            ellipse(965,250,90,90); } 
            
-          if(
-          (mousePressed && mouseX<610 && mouseX>520 && mouseY<295 && mouseY>205)
-          ||(mousePressed && mouseX<380 && mouseX>290 && mouseY<405 && mouseY>315)||(mousePressed && mouseX<610 && mouseX>520 && mouseY<405 && mouseY>315))
-          {ny=0;  nx=-1; p.vx=5; p.vy=5; playing1=false;}
+          //if(
+           //  (mousePressed && mouseX<380 && mouseX>290 && mouseY<405 && mouseY>315)||(mousePressed && mouseX<610 && mouseX>520 && mouseY<405 && mouseY>315))
+          //{ny=0;  nx=-1; p.vx=5; p.vy=5; playing1=false;}
+         if(mousePressed && mouseX<380 && mouseX>290 && mouseY<405 && mouseY>315){ny=0;  nx=-1; p.vx=5; p.vy=5; playing1=false;fill(200,0,0); ellipse(335,360,90,90);} 
+         if(mousePressed && mouseX<610 && mouseX>520 && mouseY<405 && mouseY>315){ny=0;  nx=-1; p.vx=5; p.vy=5; playing1=false;fill(200,0,0); ellipse(565,360,90,90);} 
+         if(mousePressed && mouseX<495 && mouseX>405 && mouseY<515 && mouseY>425){ny=0;  nx=-1; p.vx=5; p.vy=5; playing1=false;fill(200,0,0); ellipse(450,470,90,90);}
+          
           break;
           
         case 6:
@@ -849,8 +875,9 @@ class Puzzle{
            fill(0,200,0);
            ellipse(965,360,90,90); }  
            
-         if(mousePressed && mouseX<495 && mouseX>405 && mouseY<515 && mouseY>425)        
-          {ny=0;  nx=-1; p.vx=5; p.vy=5; playing1=false;}  
+        // if(mousePressed && mouseX<495 && mouseX>405 && mouseY<515 && mouseY>425)        
+         // {ny=0;  nx=-1; p.vx=5; p.vy=5; playing1=false;}  
+          if(mousePressed && mouseX<495 && mouseX>405 && mouseY<515 && mouseY>425){ny=0;  nx=-1; p.vx=5; p.vy=5; playing1=false;fill(200,0,0); ellipse(450,470,90,90);}
           break;  
        } 
      
