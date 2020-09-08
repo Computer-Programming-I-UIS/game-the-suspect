@@ -804,14 +804,14 @@ class Puzzle{
  
  void p5(){
    fill(0);
-   text("A)secreto",110,120);
-   text("B)agujero",110,140);
-   text("c)vida",110,160);
-   text("D)nombre",110,180);
-   text("E)sombra",110,200);
-   text("F)sandia",110,220);
-   text("G)huevo",110,240);
-   text("H)acertijo",110,260);
+   text("A) secreto",110,120);
+   text("B) agujero",110,140);
+   text("c) vida",110,160);
+   text("D) nombre",110,180);
+   text("E) sombra",110,200);
+   text("Q) sandia",110,220);
+   text("G) huevo",110,240);
+   text("H) acertijo",110,260);
    
    if(playing1){
    fill(200);  
@@ -836,7 +836,10 @@ class Puzzle{
    Treto=reto1+reto2+reto3+reto4+reto5+reto6+reto7+reto8;
      
    if(Treto>2){fill(100,0,0);textSize(50);text("felicidades",350,400);}
-   
+   textSize(15);
+   text("Cada acertijo corresponde a una de las palabras mostradas debajo del cuadro 'frase'",290,118);
+   text("Seleccione la letra correspondiente a cada acertijo,despues de dar click sobre algun cuadro blanco",290,140);
+   textSize(11);
    if(mouseButton==LEFT && mouseX>300 && mouseX<350 && mouseY>200 && mouseY<250 ){
      mousePressed=true;
      fill(100);
@@ -903,11 +906,11 @@ class Puzzle{
     if(mouseButton==LEFT && mouseX>660 && mouseX<710 && mouseY>200 && mouseY<250 ){
      mousePressed=true;
      fill(100);
-     rect(300,300,470,250);
+     rect(300,300,470,200);
      fill(0);
      text("Continuas en rojo, pero te paras en verde. ¿Qué soy?",301,320);//sandia
-     if (keyPressed==true && key =='f'){fill(0,200,0);textSize(50);text("✔",510,450);reto7=1;}
-     if (keyPressed==true && key !='f'){fill(200,0,0);textSize(50);text("x",510,450);}
+     if (keyPressed==true && key =='q'){fill(0,200,0);textSize(50);text("✔",510,450);reto7=1;}
+     if (keyPressed==true && key !='q'){fill(200,0,0);textSize(50);text("x",510,450);}
      }
      
      if(mouseButton==LEFT && mouseX>720 && mouseX<770 && mouseY>200 && mouseY<250 ){
