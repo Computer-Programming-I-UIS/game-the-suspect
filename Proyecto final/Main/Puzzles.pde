@@ -839,6 +839,7 @@ class Puzzle{
    textSize(15);
    text("Cada acertijo corresponde a una de las palabras mostradas debajo del cuadro 'frase'",290,118);
    text("Seleccione la letra correspondiente a cada acertijo,despues de dar click sobre algun cuadro blanco",290,140);
+   
    textSize(11);
    if(mouseButton==LEFT && mouseX>300 && mouseX<350 && mouseY>200 && mouseY<250 ){
      mousePressed=true;
@@ -846,7 +847,7 @@ class Puzzle{
      rect(300,300,470,200);
      fill(0);
      text("¿Qué es aquello que te pertenece, pero al resto de personas lo usan más que tú?",301,320);//nombre
-     if (keyPressed==true && key =='d'){fill(0,200,0);textSize(50);text("✔",510,450);reto1=1;}
+     if ( key =='d'){fill(0,200,0);textSize(50);text("✔",510,450);reto1=1;}
      if (keyPressed==true && key !='d'){fill(200,0,0);textSize(50);text("x",510,450);}
      }
      
@@ -857,7 +858,7 @@ class Puzzle{
      fill(0);
      textSize(11);
      text("Si me tienes, te apetece compartirme. Si me compartes dejarás de tenerme. ¿Quién soy?",301,320);  //secreto
-     if (keyPressed==true && key =='a'){fill(0,200,0);textSize(50);text("✔",510,450);reto2=1;}
+     if ( key =='a'){fill(0,200,0);textSize(50);text("✔",510,450);reto2=1;}
      if (keyPressed==true && key !='a'){fill(200,0,0);textSize(50);text("x",510,450);}
      }
      
@@ -868,7 +869,7 @@ class Puzzle{
      fill(0);
      textSize(11);
      text("¿Qué cosa es que cuanto más le quitas más grande es?",301,320);    //agujero
-     if (keyPressed==true && key =='b'){fill(0,200,0);textSize(50);text("✔",510,450);reto3=1;}
+     if ( key =='b'){fill(0,200,0);textSize(50);text("✔",510,450);reto3=1;}
      if (keyPressed==true && key !='b'){fill(200,0,0);textSize(50);text("x",510,450);}
      }   
    
@@ -878,7 +879,7 @@ class Puzzle{
      rect(300,300,470,200);
      fill(0);
      text("Es algo que que crece, pero que se encoge al mismo tiempo ¿Qué es?",301,320); //vida
-     if (keyPressed==true && key =='c'){fill(0,200,0);textSize(50);text("✔",510,450);reto4=1;}
+     if ( key =='c'){fill(0,200,0);textSize(50);text("✔",510,450);reto4=1;}
      if (keyPressed==true && key !='c'){fill(200,0,0);textSize(50);text("x",510,450);}
      }
      
@@ -889,7 +890,7 @@ class Puzzle{
      fill(0);
      text("Existo en tu mente cuando no me conoces, pero desaparezco cuando sabes.",301,320);  //acertijo 
      text("¿quien soy?",301,328);
-     if (keyPressed==true && key =='h'){fill(0,200,0);textSize(50);text("✔",510,450);reto5=1;}
+     if ( key =='h'){fill(0,200,0);textSize(50);text("✔",510,450);reto5=1;}
      if (keyPressed==true && key !='h'){fill(200,0,0);textSize(50);text("x",510,450);}
      }
      
@@ -899,7 +900,7 @@ class Puzzle{
      rect(300,300,470,200);
      fill(0);
      text("¿Que es mas util cuando esta roto?.",301,320);   //huevo
-     if (keyPressed==true && key =='g'){fill(0,200,0);textSize(50);text("✔",510,450);reto6=1;}
+     if ( key =='g'){fill(0,200,0);textSize(50);text("✔",510,450);reto6=1;}
      if (keyPressed==true && key !='g'){fill(200,0,0);textSize(50);text("x",510,450);}
      }
      
@@ -909,7 +910,7 @@ class Puzzle{
      rect(300,300,470,200);
      fill(0);
      text("Continuas en rojo, pero te paras en verde. ¿Qué soy?",301,320);//sandia
-     if (keyPressed==true && key =='q'){fill(0,200,0);textSize(50);text("✔",510,450);reto7=1;}
+     if ( key =='q'){fill(0,200,0);textSize(50);text("✔",510,450);reto7=1;}
      if (keyPressed==true && key !='q'){fill(200,0,0);textSize(50);text("x",510,450);}
      }
      
@@ -919,7 +920,7 @@ class Puzzle{
      rect(300,300,470,200);
      fill(0);
      text("Estoy contigo todo el dia pero no toda la noche.¿Que soy?.",301,320);  //sombra
-     if (keyPressed==true && key =='e'){fill(0,200,0);textSize(50);text("✔",510,450);reto1=8;}
+     if ( key =='e'){fill(0,200,0);textSize(50);text("✔",510,450);reto8=1;}
      if (keyPressed==true && key !='e'){fill(200,0,0);textSize(50);text("x",510,450);}
      }
      
