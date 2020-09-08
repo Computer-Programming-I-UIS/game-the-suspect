@@ -3,7 +3,7 @@ class Puzzle{
   float cuadp1, xlim, vlim, posx, posy,time = 0;
   float p3rx, p3ry, p3x, p3y = 0;
   int i, c,seg, min, p3time = 0;
-  boolean com,com2,kill3 = false;
+  boolean com,com2,kill3, com4 = false;
   PVector[] fichas = new PVector[8];  
   PVector[][] p3cuadros = new PVector[7][4];
   boolean[][]p3pos = new boolean[7][4];
@@ -216,6 +216,33 @@ class Puzzle{
         }
       }
      }
+   }
+   
+   void p1reset(){
+     
+     for(int yf = 0; yf < 3; yf++){
+      if (yf == 2){
+       xlim = 2; 
+      }
+      else {
+       xlim = 3; 
+      }
+      for(int xf = 0; xf < xlim; xf++){
+        if((i <= 9)){
+        fichas[i].set(posx+10+(cuadp1*xf),posy+10+(cuadp1*yf));
+        }
+        i++;
+      } 
+   }
+     
+    image(monalisa[0],fichas[0].x,fichas[0].y);
+   image(monalisa[1],fichas[4].x,fichas[4].y);
+   image(monalisa[2],fichas[3].x,fichas[3].y);
+   image(monalisa[3],fichas[6].x,fichas[6].y);
+   image(monalisa[4],fichas[2].x,fichas[2].y);
+   image(monalisa[5],fichas[5].x,fichas[5].y);
+   image(monalisa[6],fichas[1].x,fichas[1].y);
+   image(monalisa[7],fichas[7].x,fichas[7].y); 
    }
    
    void check(){
@@ -690,6 +717,17 @@ class Puzzle{
       if(m){ellipse(450,250,90,90);nivel=3;}}*/
       
       
+      if(orden6 == 1 && 
+      orden61 == 1 &&
+      orden62 == 1 &&
+      orden63 == 1 &&
+      orden64 == 1 &&
+      orden65 == 1 &&
+      orden66 == 1 &&
+      orden67 == 1 ){
+        com4 = true;
+      }
+      
        
       
        switch(nivel){
@@ -923,7 +961,8 @@ class Puzzle{
    Tprueba=prueba1+prueba2+prueba3+prueba4+prueba5+prueba6+prueba7+prueba8;
      
    if(Treto>2){fill(100,0,0);textSize(50);text("felicidades",350,400);}
-   if(Tprueba==2){ny=0;  nx=-1; p.vx=5; p.vy=5; playing1=false;}
+   /*if(Tprueba==2)/*ny=0;  nx=-1; p.vx=5; p.vy=5; playing1=false;}*/
+   //kill(Tprueba==2);
    
    if(reto1==1){fill(0,200,0);text("✔",323,240);}
    if(reto2==1){fill(0,200,0);text("✔",383,240);}

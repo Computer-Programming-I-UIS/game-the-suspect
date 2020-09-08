@@ -307,7 +307,9 @@ void nivel01() {
   pa[8] = new Pared(puerta[2].x-puerta[2].ly, puerta[2].y+puerta[2].lx+puerta[2].esp/2, puerta[2].ly, puerta[2].lx);
   fill(50);
   puerta[2].display();
-  puerta[2].mov(key == ' ');
+  puerta[2].mov(pu.Treto > 2);
+  
+  kill(pu.Tprueba==2);
 }
 
 void nivel10() {
@@ -394,19 +396,6 @@ void nivel11() {
     default:
       pa[i] = new Pared(0, 0, 0, 0);
     }
-    /*fill(0);
-     rect(100,50,140,35);
-     fill(255);
-     textSize(14);
-     text("frase:",110,70);
-     
-     text("Sigue la secuencia",550,137);
-     
-     fill(0);
-     rect(60,500,100,100);
-     inip4();
-     if(pu1){
-     pu.p4();}*/
   }
 
   fill(0);
@@ -428,5 +417,5 @@ void nivel11() {
   pa[6] = new Pared(puerta[2].x-puerta[2].ly, puerta[2].y+puerta[2].lx+puerta[2].esp/2, puerta[2].ly, puerta[2].lx);
   fill(50);
   puerta[2].display();
-  puerta[2].mov(key == ' ');
+  puerta[2].mov(pu.com4);
 }

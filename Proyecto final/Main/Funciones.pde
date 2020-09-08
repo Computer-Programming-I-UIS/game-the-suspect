@@ -269,6 +269,9 @@ void creditos(){
        pu.min = 0;
        pu.seg = 0;
        pu.kill3 = false;
+       pu.Tprueba = 0;
+       pu.i = 0;
+       pu.p1reset();
        
        pu1 = false;
        playing1 = false;

@@ -54,8 +54,8 @@ void setup(){
   opendoor.loop();
   opendoor.pause();
   
-  ny = 1;
-  nx = -1;
+  ny = 0;
+  nx = -2;
   credy1 = 800;
   credy2 = 100;
   tras1 = 255;
@@ -119,6 +119,9 @@ void draw(){
     kill(pu.min >= lmin );
     if(nx == 1 && ny == 0){
       kill(pu.kill3);
+    }
+    if(nx == 0 && ny == 1){
+     kill(pu.Tprueba == 2); 
     }
   }
   
