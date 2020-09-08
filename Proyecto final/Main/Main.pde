@@ -55,7 +55,7 @@ void setup(){
   opendoor.pause();
   
   ny = 0;
-  nx = -1;
+  nx = -2;
   credy1 = 800;
   credy2 = 100;
   tras1 = 255;
