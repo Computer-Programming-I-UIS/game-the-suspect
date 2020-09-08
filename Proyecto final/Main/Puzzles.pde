@@ -33,6 +33,7 @@ class Puzzle{
   int Treto;
   int prueba1,prueba2,prueba3,prueba4,prueba5,prueba6,prueba7,prueba8;
   int Tprueba;
+  int repeat;
   
  Puzzle(float posxx, float posyy){
    lp1 = 30;
@@ -562,12 +563,8 @@ class Puzzle{
   void p4(){
     
    
-   if(circulo==1){currentTime+=1;}
-   if(circulo==2){currentTime1+=1;}
-   if(circulo==3){currentTime2+=1;}
-   if(circulo==4){currentTime3+=1;}
-   if(circulo==5){currentTime4+=1;}
-   if(circulo==6){currentTime5+=1;}
+    
+ 
    fill(0);
    text("secreto",110,120);
    text("agujero",110,140);
@@ -579,7 +576,13 @@ class Puzzle{
    
    
    if (playing1){
-      
+     
+   if(circulo==1){currentTime+=1;}
+   if(circulo==2){currentTime1+=1;}
+   if(circulo==3){currentTime2+=1;}
+   if(circulo==4){currentTime3+=1;}
+   if(circulo==5){currentTime4+=1;}
+   if(circulo==6){currentTime5+=1;}
     
     text(currentTime,700,50);
     
@@ -616,26 +619,47 @@ class Puzzle{
     text("n",445,470);
     text("m",560,470);*/
     
-    if (circulo>0 && circulo<7){
+     if (circulo==1){
        if(mousePressed && mouseX<380 && mouseX>290 && mouseY<295 && mouseY>205){fill(0,200,0);ellipse(335,250,90,90);orden=1;}
       
        if(mousePressed && mouseX<495 && mouseX>405 && mouseY<405 && mouseY>315){fill(0,200,0);ellipse(450,360,90,90);orden1=1;}}
        
-     if (circulo>1 && circulo<7){ 
+       
+     if (circulo==2){ 
+       
+       if(mousePressed && mouseX<380 && mouseX>290 && mouseY<295 && mouseY>205){fill(0,200,0);ellipse(335,250,90,90);orden=1;}     
+       if(mousePressed && mouseX<495 && mouseX>405 && mouseY<405 && mouseY>315){fill(0,200,0);ellipse(450,360,90,90);orden1=1;}
        if(mousePressed && mouseX<495 && mouseX>405 && mouseY<295 && mouseY>205){fill(0,200,0);ellipse(450,250,90,90);orden2=1;}}
        
-     if (circulo>2 && circulo<7){ 
+     if (circulo==3){ 
+       if(mousePressed && mouseX<380 && mouseX>290 && mouseY<295 && mouseY>205){fill(0,200,0);ellipse(335,250,90,90);orden=1;}     
+       if(mousePressed && mouseX<495 && mouseX>405 && mouseY<405 && mouseY>315){fill(0,200,0);ellipse(450,360,90,90);orden1=1;}
+       if(mousePressed && mouseX<495 && mouseX>405 && mouseY<295 && mouseY>205){fill(0,200,0);ellipse(450,250,90,90);orden2=1;}
        if(mousePressed && mouseX<610 && mouseX>520 && mouseY<515 && mouseY>425){fill(0,200,0);ellipse(565,470,90,90);orden3=1;}}
       
-     if (circulo>3 && circulo<7){  
+     if (circulo==4){  
+       if(mousePressed && mouseX<380 && mouseX>290 && mouseY<295 && mouseY>205){fill(0,200,0);ellipse(335,250,90,90);orden=1;}     
+       if(mousePressed && mouseX<495 && mouseX>405 && mouseY<405 && mouseY>315){fill(0,200,0);ellipse(450,360,90,90);orden1=1;}
+       if(mousePressed && mouseX<495 && mouseX>405 && mouseY<295 && mouseY>205){fill(0,200,0);ellipse(450,250,90,90);orden2=1;}
+       if(mousePressed && mouseX<610 && mouseX>520 && mouseY<515 && mouseY>425){fill(0,200,0);ellipse(565,470,90,90);orden3=1;}
        if(mousePressed && mouseX<380 && mouseX>290 && mouseY<515 && mouseY>425){fill(0,200,0);ellipse(335,470,90,90);orden4=1;}}
        
-     if (circulo>4 && circulo<7){  
+     if (circulo==5){  
+       if(mousePressed && mouseX<380 && mouseX>290 && mouseY<295 && mouseY>205){fill(0,200,0);ellipse(335,250,90,90);orden=1;}     
+       if(mousePressed && mouseX<495 && mouseX>405 && mouseY<405 && mouseY>315){fill(0,200,0);ellipse(450,360,90,90);orden1=1;}
+       if(mousePressed && mouseX<495 && mouseX>405 && mouseY<295 && mouseY>205){fill(0,200,0);ellipse(450,250,90,90);orden2=1;}
+       if(mousePressed && mouseX<610 && mouseX>520 && mouseY<515 && mouseY>425){fill(0,200,0);ellipse(565,470,90,90);orden3=1;}
+       if(mousePressed && mouseX<380 && mouseX>290 && mouseY<515 && mouseY>425){fill(0,200,0);ellipse(335,470,90,90);orden4=1;}
        if(mousePressed && mouseX<610 && mouseX>520 && mouseY<295 && mouseY>205){fill(0,200,0);ellipse(565,250,90,90);orden5=1;}}
        
      if (circulo==6){  
+       if(mousePressed && mouseX<380 && mouseX>290 && mouseY<295 && mouseY>205){fill(0,200,0);ellipse(335,250,90,90);orden=1;}     
+       if(mousePressed && mouseX<495 && mouseX>405 && mouseY<405 && mouseY>315){fill(0,200,0);ellipse(450,360,90,90);orden1=1;}
+       if(mousePressed && mouseX<495 && mouseX>405 && mouseY<295 && mouseY>205){fill(0,200,0);ellipse(450,250,90,90);orden2=1;}
+       if(mousePressed && mouseX<610 && mouseX>520 && mouseY<515 && mouseY>425){fill(0,200,0);ellipse(565,470,90,90);orden3=1;}
+       if(mousePressed && mouseX<380 && mouseX>290 && mouseY<515 && mouseY>425){fill(0,200,0);ellipse(335,470,90,90);orden4=1;}
+       if(mousePressed && mouseX<610 && mouseX>520 && mouseY<295 && mouseY>205){fill(0,200,0);ellipse(565,250,90,90);orden5=1;}
        if(mousePressed && mouseX<380 && mouseX>290 && mouseY<405 && mouseY>315){fill(0,200,0);ellipse(335,360,90,90);orden6=1;}
-       
        if(mousePressed && mouseX<610 && mouseX>520 && mouseY<405 && mouseY>315){fill(0,200,0);ellipse(565,360,90,90);orden6=1;}}
        
        
@@ -665,7 +689,12 @@ class Puzzle{
       ellipse(335,250,90,90);
       if(h){ellipse(450,360,90,90);}
       if(m){ellipse(450,250,90,90);nivel=3;}}*/
+      
+      switch(repeat){
         
+        case 1:
+        currentTime=0;
+        nivel=1;}
        
       
        switch(nivel){
@@ -679,6 +708,11 @@ class Puzzle{
         if(currentTime>500 && currentTime < 550){
            fill(0,200,0);
             ellipse(850,360,90,90); }
+            
+         if((mousePressed && mouseX<495 && mouseX>405 && mouseY<295 && mouseY>205)||(mousePressed && mouseX<610 && mouseX>520 && mouseY<515 && mouseY>425)
+          ||(mousePressed && mouseX<380 && mouseX>290 && mouseY<515 && mouseY>425)||(mousePressed && mouseX<610 && mouseX>520 && mouseY<295 && mouseY>205)
+          ||(mousePressed && mouseX<380 && mouseX>290 && mouseY<405 && mouseY>315)||(mousePressed && mouseX<610 && mouseX>520 && mouseY<405 && mouseY>315))
+          {ny=0;  nx=-1; p.vx=5; p.vy=5; playing1=false;}  
         
         break;
         
@@ -695,6 +729,10 @@ class Puzzle{
         if(currentTime1>600 && currentTime1 < 650){
            fill(0,200,0);
             ellipse(850,250,90,90); }
+        if((mousePressed && mouseX<610 && mouseX>520 && mouseY<515 && mouseY>425)
+          ||(mousePressed && mouseX<380 && mouseX>290 && mouseY<515 && mouseY>425)||(mousePressed && mouseX<610 && mouseX>520 && mouseY<295 && mouseY>205)
+          ||(mousePressed && mouseX<380 && mouseX>290 && mouseY<405 && mouseY>315)||(mousePressed && mouseX<610 && mouseX>520 && mouseY<405 && mouseY>315))
+          {ny=0;  nx=-1; p.vx=5; p.vy=5; playing1=false;}  
         
         break;
         
@@ -738,6 +776,11 @@ class Puzzle{
         if(currentTime3>800 && currentTime3 < 850){
            fill(0,200,0);
            ellipse(735,470,90,90); }
+           
+        if(
+          (mousePressed && mouseX<380 && mouseX>290 && mouseY<515 && mouseY>425)||(mousePressed && mouseX<610 && mouseX>520 && mouseY<295 && mouseY>205)
+          ||(mousePressed && mouseX<380 && mouseX>290 && mouseY<405 && mouseY>315)||(mousePressed && mouseX<610 && mouseX>520 && mouseY<405 && mouseY>315))
+          {ny=0;  nx=-1; p.vx=5; p.vy=5; playing1=false;}     
         break;  
         
         case 5:
@@ -765,6 +808,11 @@ class Puzzle{
         if(currentTime4>900 && currentTime4 < 950){
            fill(0,200,0);
            ellipse(965,250,90,90); } 
+           
+          if(
+          (mousePressed && mouseX<610 && mouseX>520 && mouseY<295 && mouseY>205)
+          ||(mousePressed && mouseX<380 && mouseX>290 && mouseY<405 && mouseY>315)||(mousePressed && mouseX<610 && mouseX>520 && mouseY<405 && mouseY>315))
+          {ny=0;  nx=-1; p.vx=5; p.vy=5; playing1=false;}
           break;
           
         case 6:
@@ -799,7 +847,10 @@ class Puzzle{
            
         if(currentTime5>1100 && currentTime5< 1150){
            fill(0,200,0);
-           ellipse(965,360,90,90); }    
+           ellipse(965,360,90,90); }  
+           
+         if(mousePressed && mouseX<495 && mouseX>405 && mouseY<515 && mouseY>425)        
+          {ny=0;  nx=-1; p.vx=5; p.vy=5; playing1=false;}  
           break;  
        } 
      
@@ -808,6 +859,7 @@ class Puzzle{
  
  
  void p5(){
+   
    fill(200);
    rect(105,110,90,155);
    fill(0);
