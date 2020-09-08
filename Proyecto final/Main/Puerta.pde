@@ -2,7 +2,7 @@ class Puerta{
  float x,y,lx,ly,esp,vel,inx,ang,tim = 0;
  
   Puerta(float posx, float posy, float angle){
-    lx = 70;
+    lx = 80;
     ly = 20;
     x = posx;
     y = posy;

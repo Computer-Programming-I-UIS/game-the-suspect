@@ -9,7 +9,7 @@ float trax,tray,travx,travy,credy1,credy2,tim,introtime,introvol,credvol = 0;
 float tras1, tras2, tras3, lmin = 0;
 int ny,nx,anim = 0;
 Personaje p;
-Puerta[] puerta = new Puerta[1];
+Puerta[] puerta = new Puerta[3];
 Pared[] pa = new Pared[10];
 Puzzle pu;
 int[] pisoY = new int[30];
@@ -54,8 +54,8 @@ void setup(){
   opendoor.loop();
   opendoor.pause();
   
-  ny = 0;
-  nx = -2;
+  ny = 1;
+  nx = -1;
   credy1 = 800;
   credy2 = 100;
   tras1 = 255;
@@ -72,7 +72,9 @@ void setup(){
   for(int i = 0; i < pa.length; i++){
     pa[i] = new Pared(0,0,0,0);
   }
-  puerta[0] = new Puerta (1180,270,PI/2); 
+  puerta[0] = new Puerta (1180,260,PI/2); 
+  puerta[1] = new Puerta (530,40,0);
+  puerta[2] = new Puerta (60,260,PI/2);
   intro.play();
   //mgame.play();
   
