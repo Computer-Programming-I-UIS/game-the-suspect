@@ -466,6 +466,21 @@ class Puzzle{
   
     
   void p3(float px, float py, float prx, float pry){
+    
+    if(frameCount%60 == 0){
+    seg += 1; 
+   }
+   if(seg >= 60){
+    seg = 0;
+    min += 1;
+   }
+   
+   fill(255);
+   rect(50,560,80,50);
+   textSize(30);
+   fill(0);
+   text(min + ":" + seg,60,600);
+   
     fill(0);  
     textSize(14);
     text("secreto",110,120);
@@ -590,7 +605,19 @@ class Puzzle{
   void p4(){
     
    
-    
+    if(frameCount%60 == 0){
+    seg += 1; 
+   }
+   if(seg >= 60){
+    seg = 0;
+    min += 1;
+   }
+   
+   fill(255);
+   rect(50,560,80,50);
+   textSize(30);
+   fill(0);
+   text(min + ":" + seg,60,600);
  
    fill(0);
    text("secreto",110,120);
@@ -604,12 +631,12 @@ class Puzzle{
    
    if (playing1){
      
-   if(circulo==1){currentTime+=1;}
-   if(circulo==2){currentTime1+=1;}
-   if(circulo==3){currentTime2+=1;}
-   if(circulo==4){currentTime3+=1;}
-   if(circulo==5){currentTime4+=1;}
-   if(circulo==6){currentTime5+=1;}
+   if(circulo==1){currentTime+=6;}
+   if(circulo==2){currentTime1+=6;}
+   if(circulo==3){currentTime2+=6;}
+   if(circulo==4){currentTime3+=6;}
+   if(circulo==5){currentTime4+=6;}
+   if(circulo==6){currentTime5+=6;}
     
     text(currentTime,700,50);
     
@@ -925,9 +952,24 @@ class Puzzle{
  
  void p5(){
    
-   fill(200);
-   rect(105,110,90,155);
+   if(frameCount%60 == 0){
+    seg += 1; 
+   }
+   if(seg >= 60){
+    seg = 0;
+    min += 1;
+   }
+   
+   fill(255);
+   rect(50,560,80,50);
+   textSize(30);
    fill(0);
+   text(min + ":" + seg,60,600);
+   
+   fill(200);
+   rect(105,100,120,200);
+   fill(0);
+   textSize(20);
    text("A) secreto",110,120);
    text("B) agujero",110,140);
    text("c) vida",110,160);
@@ -984,10 +1026,11 @@ class Puzzle{
    
    
    
-   textSize(15);
-   fill(50);
-   text("Cada acertijo corresponde a una de las palabras mostradas debajo del cuadro 'frase'",290,118);
-   text("Seleccione la letra correspondiente a cada acertijo,despues de dar click sobre algun cuadro blanco",290,140);
+   textSize(20);
+   fill(0);
+   text("Cada acertijo corresponde a una de las palabras mostradas debajo del cuadro 'frase'",250,118);
+   text("Seleccione la letra correspondiente a cada acertijo,despues de posicionar el mouse sobre",250,140);
+   text("algun cuadro blanco", 250,170);
    
    textSize(11);
    
