@@ -31,6 +31,9 @@ class Puzzle{
   int orden6=0;
   int reto1,reto2,reto3,reto4,reto5,reto6,reto7,reto8;
   int Treto;
+  int prueba1,prueba2,prueba3,prueba4,prueba5,prueba6,prueba7,prueba8;
+  int Tprueba;
+  
  Puzzle(float posxx, float posyy){
    lp1 = 30;
    diamp1 = 80;
@@ -803,6 +806,8 @@ class Puzzle{
  
  
  void p5(){
+   fill(200);
+   rect(105,110,90,155);
    fill(0);
    text("A) secreto",110,120);
    text("B) agujero",110,140);
@@ -834,95 +839,128 @@ class Puzzle{
    text("8",743,223);
    
    Treto=reto1+reto2+reto3+reto4+reto5+reto6+reto7+reto8;
+   Tprueba=prueba1+prueba2+prueba3+prueba4+prueba5+prueba6+prueba7+prueba8;
      
    if(Treto>2){fill(100,0,0);textSize(50);text("felicidades",350,400);}
+   if(Tprueba==2){ny=0;  nx=-1; p.vx=5; p.vy=5; playing1=false;}
+   
+   if(reto1==1){fill(0,200,0);text("✔",323,240);}
+   if(reto2==1){fill(0,200,0);text("✔",383,240);}
+   if(reto3==1){fill(0,200,0);text("✔",443,240);}
+   if(reto4==1){fill(0,200,0);text("✔",503,240);}
+   if(reto5==1){fill(0,200,0);text("✔",563,240);}
+   if(reto6==1){fill(0,200,0);text("✔",623,240);}
+   if(reto7==1){fill(0,200,0);text("✔",683,240);}
+   if(reto8==1){fill(0,200,0);text("✔",743,240);}
+   
+   if(prueba1==1){fill(220,0,0);text("x",323,240);}
+   if(prueba2==1){fill(220,0,0);text("x",383,240);}
+   if(prueba3==1){fill(220,0,0);text("x",443,240);}
+   if(prueba4==1){fill(220,0,0);text("x",503,240);}
+   if(prueba5==1){fill(220,0,0);text("x",563,240);}
+   if(prueba6==1){fill(220,0,0);text("x",623,240);}
+   if(prueba7==1){fill(220,0,0);text("x",683,240);}
+   if(prueba8==1){fill(220,0,0);text("x",743,240);}
+   
+   
+   
    textSize(15);
+   fill(50);
    text("Cada acertijo corresponde a una de las palabras mostradas debajo del cuadro 'frase'",290,118);
    text("Seleccione la letra correspondiente a cada acertijo,despues de dar click sobre algun cuadro blanco",290,140);
    
    textSize(11);
-   if(mouseButton==LEFT && mouseX>300 && mouseX<350 && mouseY>200 && mouseY<250 ){
-     mousePressed=true;
+   
+   if(prueba1==0 && reto1==0){
+   if(mouseX>300 && mouseX<350 && mouseY>200 && mouseY<250 ){
+     
      fill(100);
      rect(300,300,470,200);
      fill(0);
      text("¿Qué es aquello que te pertenece, pero al resto de personas lo usan más que tú?",301,320);//nombre
-     if ( key =='d'){fill(0,200,0);textSize(50);text("✔",510,450);reto1=1;}
-     if (keyPressed==true && key !='d'){fill(200,0,0);textSize(50);text("x",510,450);}
-     }
+     if (keyPressed==true && key =='d'){fill(0,200,0);textSize(50);text("✔",510,450);reto1=1;}
+     if (keyPressed==true && ( key =='b'|| key =='c'||key =='a'|| key =='e'||key =='q'|| key =='g'|| key =='h')){fill(200,0,0);textSize(50);text("x",510,450);prueba1=1;}
+     }}
+   
+   if(prueba2==0 && reto2==0){  
+   if( mouseX>360 && mouseX<410 && mouseY>200 && mouseY<250 ){
      
-   if(mouseButton==LEFT && mouseX>360 && mouseX<410 && mouseY>200 && mouseY<250 ){
-     mousePressed=true;
      fill(100);
      rect(300,300,470,200);
      fill(0);
      textSize(11);
      text("Si me tienes, te apetece compartirme. Si me compartes dejarás de tenerme. ¿Quién soy?",301,320);  //secreto
-     if ( key =='a'){fill(0,200,0);textSize(50);text("✔",510,450);reto2=1;}
-     if (keyPressed==true && key !='a'){fill(200,0,0);textSize(50);text("x",510,450);}
-     }
+     if (keyPressed==true && key =='a'){fill(0,200,0);textSize(50);text("✔",510,450);reto2=1;}
+     if (keyPressed==true && ( key =='b'|| key =='c'||key =='d'|| key =='e'||key =='q'|| key =='g'|| key =='h')){fill(200,0,0);textSize(50);text("x",510,450);prueba2=1;}
+     }}
+    
+   if(prueba3==0 && reto3==0){   
+   if( mouseX>420 && mouseX<470 && mouseY>200 && mouseY<250 ){
      
-   if(mouseButton==LEFT && mouseX>420 && mouseX<470 && mouseY>200 && mouseY<250 ){
-     mousePressed=true;
      fill(100);
      rect(300,300,470,200);
      fill(0);
      textSize(11);
      text("¿Qué cosa es que cuanto más le quitas más grande es?",301,320);    //agujero
-     if ( key =='b'){fill(0,200,0);textSize(50);text("✔",510,450);reto3=1;}
-     if (keyPressed==true && key !='b'){fill(200,0,0);textSize(50);text("x",510,450);}
-     }   
+     if (keyPressed==true && key =='b'){fill(0,200,0);textSize(50);text("✔",510,450);reto3=1;}
+     if (keyPressed==true && ( key =='a'|| key =='c'||key =='d'|| key =='e'||key =='q'|| key =='g'|| key =='h')){fill(200,0,0);textSize(50);text("x",510,450);prueba3=1;}
+     }}   
    
-   if(mouseButton==LEFT && mouseX>480 && mouseX<530 && mouseY>200 && mouseY<250 ){
-     mousePressed=true;
+   if(prueba4==0 && reto4==0){ 
+   if( mouseX>480 && mouseX<530 && mouseY>200 && mouseY<250 ){
+     
      fill(100);
      rect(300,300,470,200);
      fill(0);
      text("Es algo que que crece, pero que se encoge al mismo tiempo ¿Qué es?",301,320); //vida
-     if ( key =='c'){fill(0,200,0);textSize(50);text("✔",510,450);reto4=1;}
-     if (keyPressed==true && key !='c'){fill(200,0,0);textSize(50);text("x",510,450);}
-     }
+     if (keyPressed==true && key =='c'){fill(0,200,0);textSize(50);text("✔",510,450);reto4=1;}
+     if (keyPressed==true && ( key =='b'|| key =='a'||key =='d'|| key =='e'||key =='q'|| key =='g'|| key =='h')){fill(200,0,0);textSize(50);text("x",510,450);prueba4=1;}
+     }}
      
-    if(mouseButton==LEFT && mouseX>540 && mouseX<590 && mouseY>200 && mouseY<250 ){
-     mousePressed=true;
+    if(prueba5==0 && reto5==0){  
+    if( mouseX>540 && mouseX<590 && mouseY>200 && mouseY<250 ){
+     
      fill(100);
      rect(300,300,470,200);
      fill(0);
      text("Existo en tu mente cuando no me conoces, pero desaparezco cuando sabes.",301,320);  //acertijo 
-     text("¿quien soy?",301,328);
-     if ( key =='h'){fill(0,200,0);textSize(50);text("✔",510,450);reto5=1;}
-     if (keyPressed==true && key !='h'){fill(200,0,0);textSize(50);text("x",510,450);}
-     }
+     text("¿quien soy?",301,330);
+     if (keyPressed==true && key =='h'){fill(0,200,0);textSize(50);text("✔",510,450);reto5=1;}
+     if (keyPressed==true && ( key =='b'|| key =='c'||key =='d'|| key =='e'||key =='q'|| key =='g'|| key =='a')){fill(200,0,0);textSize(50);text("x",510,450);prueba5=1;}
+     }}
      
-    if(mouseButton==LEFT && mouseX>600 && mouseX<650 && mouseY>200 && mouseY<250 ){
-     mousePressed=true;
+    if(prueba6==0 && reto6==0){  
+    if( mouseX>600 && mouseX<650 && mouseY>200 && mouseY<250 ){
+     
      fill(100);
      rect(300,300,470,200);
      fill(0);
      text("¿Que es mas util cuando esta roto?.",301,320);   //huevo
-     if ( key =='g'){fill(0,200,0);textSize(50);text("✔",510,450);reto6=1;}
-     if (keyPressed==true && key !='g'){fill(200,0,0);textSize(50);text("x",510,450);}
-     }
+     if (keyPressed==true && key =='g'){fill(0,200,0);textSize(50);text("✔",510,450);reto6=1;}
+     if (keyPressed==true && ( key =='b'|| key =='c'||key =='d'|| key =='e'||key =='q'|| key =='a'|| key =='h')){fill(200,0,0);textSize(50);text("x",510,450);prueba6=1;}
+     }}
      
-    if(mouseButton==LEFT && mouseX>660 && mouseX<710 && mouseY>200 && mouseY<250 ){
-     mousePressed=true;
+    if(prueba7==0 && reto7==0){  
+    if( mouseX>660 && mouseX<710 && mouseY>200 && mouseY<250 ){
+     
      fill(100);
      rect(300,300,470,200);
      fill(0);
      text("Continuas en rojo, pero te paras en verde. ¿Qué soy?",301,320);//sandia
-     if ( key =='q'){fill(0,200,0);textSize(50);text("✔",510,450);reto7=1;}
-     if (keyPressed==true && key !='q'){fill(200,0,0);textSize(50);text("x",510,450);}
-     }
+     if (keyPressed==true && key =='q'){fill(0,200,0);textSize(50);text("✔",510,450);reto7=1;}
+     if (keyPressed==true && ( key =='b'|| key =='c'||key =='d'|| key =='e'||key =='a'|| key =='g'|| key =='h')){fill(200,0,0);textSize(50);text("x",510,450);prueba7=1;}
+     }}
      
-     if(mouseButton==LEFT && mouseX>720 && mouseX<770 && mouseY>200 && mouseY<250 ){
-     mousePressed=true;
+     if(prueba8==0 && reto8==0){ 
+     if( mouseX>720 && mouseX<770 && mouseY>200 && mouseY<250 ){
+     
      fill(100);
      rect(300,300,470,200);
      fill(0);
      text("Estoy contigo todo el dia pero no toda la noche.¿Que soy?.",301,320);  //sombra
-     if ( key =='e'){fill(0,200,0);textSize(50);text("✔",510,450);reto8=1;}
-     if (keyPressed==true && key !='e'){fill(200,0,0);textSize(50);text("x",510,450);}
-     }
+     if (keyPressed==true && key =='e'){fill(0,200,0);textSize(50);text("✔",510,450);reto8=1;}
+     if (keyPressed==true && ( key =='b'|| key =='c'||key =='d'|| key =='a'||key =='q'|| key =='g'|| key =='h')){fill(200,0,0);textSize(50);text("x",510,450);prueba8=1;}
+     }}
      
  
      
