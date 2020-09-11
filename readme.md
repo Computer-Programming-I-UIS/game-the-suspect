@@ -18,6 +18,10 @@ The suspect pone en prueba la capacidad mental del jugador para resolver problem
 
 Inicio del juego:
 
+[./Banner-TheSuspect.png](./Banner-TheSuspect.png)
+
+Banner del juego
+
 ![./SuspectInicio.png](./SuspectInicio.png)
 
 Menu de inicio del juego
