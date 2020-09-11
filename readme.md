@@ -18,7 +18,7 @@ The suspect pone en prueba la capacidad mental del jugador para resolver problem
 
 Inicio del juego:
 
-[./Banner-TheSuspect.png](./Banner-TheSuspect.png)
+[./BannerTheSuspect.jpg](./BannerTheSuspect.jpg)
 
 Banner del juego
 
